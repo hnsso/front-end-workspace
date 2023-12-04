@@ -65,10 +65,126 @@
         <label><input type="checkbox" name="interest" value="game"/> 게임<br></label>
       </fieldset>
       
+      <!-- input 에는 속성 값이 정해져있다 !!-->
+
       <input type="submit" value="전송"/>
+      <input type="reset"  value="초기화"/>
+
+
+
       <fieldset>
         <legend>취미</legend>
       </fieldset>
     </form>
+
+    <h3>type= "hidden | file"</h3>
+      <form action="">
+        <input type="hidden" name="hiddenvalue" value="1234"/>
+        <label for="uploadfile"></label>
+        
+        <input type="file" id="uploadfile" name="upload" multiple accept="image/*, .pdf"/>
+        <input type="submit" value="전송"/>
+      </form>
+    </h3>
+
+    <h3>type="datetime-local|week|month|date|time"</h3>
+    <form action="">
+      <label for="datetime-local">datetime : </label>
+      <input type="datetime-local" id="datetime-local"/>
+
+      <br/><br/>
+
+      <label for="week">week:</label>
+      <input type="week" id="week"/>
+
+      <label for="month">month :</label>
+      <input type="month" id="month"/>
+
+      <label for="date">date :</label>
+      <input type="date" id="date"/>
+
+      <label for="time">time :</label>
+      <input type="time" id="time"/>
+
+
+
+    </form>
+
+    <h3>type="email|url|search|tel|</h3>
+    <form action="">
+      <label for="email">이메일 :</label>
+      <input type="email" id="email"/>
+
+      <br /><br />
+
+      <label for="url">사이트 주소 :</label>
+      <input type="url" id="url"/>
+
+      <label for="search">검색 :</label>
+      <input type="search" id="search"/>
+
+      <label for="tel">전화번호 :</label>
+      <input type="tel" id="tel"/>
+    
+      <input type="submit" value="전송"/>
+
+    </form>
+
+    <h3type="number|dange|color</h3>
+    <form action="">
+      <label for="amount">수량 : </label>
+      <input type="number" id="amount" min="0" max="10" step="2"/>
+
+      <br /><br />
+
+      <label for="point">포인트</label>
+      <input type="range" id="point" min="o" max="1000" step="100"/>
+
+      <br/><br/>
+
+      <label for="color">색상 :</label>
+      <input type="color" id="color" />
+
+      <input type="button" value="버튼" onclick="alert('버튼 클릭!')"/>
+
+    </form>
+
+      <h2>select 태그</h2>
+      <form>
+        <label for="natitonal">국적 : </label>
+
+        <select name="natitonal" id="natitonal">
+          <optgroup label="아시아">
+            <option value="kr">한국</option>
+            <option value="ch">중국</option>
+            <option value="jp">일본</option>
+          </optgroup>
+          <optgroup label="기타">
+            <option value="us">미국</option>
+            <option value="fr">프랑스</option>
+          </optgroup>
+          <option selected></option>
+          
+         
+        </select>
+      </form>
+
+      <h2>textarea 태그</h2>
+      <form action="">
+        <textarea name="id" cols="30" rows="10" style="resize: none;"></textarea>
+      
+
+        <!--ipyt type="sumit"과 같은 역할-->
+        <button type="submit">전송</button>
+        
+
+        <!--ipyt type="reset"과 같은 역할-->
+        <button type="reset">전송</button>
+
+
+        <button type="button" onclick="alert('버튼 클릭!')">버튼</button>
+
+      </form> 
+    
   </body>
 </html>
