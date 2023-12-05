@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>주문하기</title>
+  </head>
+  <body>
+    <!--양식들을 한곳으로 보내는게 1개이다 그러니깐 폼태그도 하나이다 !! 제일 하단에 주문하기 하나가 있으니깐
+        우리가 보내야할게 몇개일까 7개있다 (서버한테 보내야할 키가 7개이다) ~> 키는 name 속성으로한다-->
+    <h1>주문하기</h1>
+    <form action="">
+      <label for="name">고객명</label
+      ><input type="text" id="name" name="name" /> <br /><br />
+      <label for="phone">전화번호</label
+      ><input type="tel" id="phone" name="phone" /> <br /><br />
+      <label for="email">E-mail</label
+      ><input type="email" id="email" name="email" /> <br /><br />
+      <fieldset>
+        <legend>피자 사이즈</legend>
+        <!--radid같은 경우에는 value(어디로 보낼거냐 ?)가 필요하다-->
+        <input type="radio" id="Small" name="size" value="small" />small<label
+          for="small"
+          >Small</label
+        ><br /><br />
+        <input
+          type="radio"
+          id="Medium"
+          name="size"
+          value="Medium"
+        />Medium<label for="Medium">Mediumn</label><br /><br /><input
+          type="radio"
+          id="Large"
+          name="size"
+          value="Large"
+        />Large<label for="Large">Small</label><br /><br />
+      </fieldset>
+
+      <fieldset>
+        <legend>토핑 선택</legend>
+        <!--(lnput:checkbox[name="topping"]+label)*4-->
+        <input
+          type="checkbox"
+          id="Small"
+          name="size"
+          value="small"
+        />small<label for="small">Small</label>
+        <input
+          type="checkbox"
+          id="Small"
+          name="size"
+          value="small"
+        />small<label for="small">Small</label>
+        <input
+          type="checkbox"
+          id="Small"
+          name="size"
+          value="small"
+        />small<label for="small">Small</label>
+        <input
+          type="checkbox"
+          id="Small"
+          name="size"
+          value="small"
+        />small<label for="small">Small</label>
+      </fieldset>
+      <br />
+
+      <label for="time">희망 배송 시간</label>
+      <input type="time" id="time" name="id" />
+
+      <br /><br />
+
+      <label for="">배송시 요청사항</label>
+      <textarea
+        name="emmo"
+        id="emmo"
+        cols="30"
+        rows="10"
+        placeholder="내용을 입력하세요"
+        style="resize: none"
+      ></textarea>
+
+      <button type="submit">주문하기</button>
+    </form>
+  </body>
+</html>
