@@ -1,0 +1,14 @@
+header {
+  color: blue;
+  background-color: aqua;
+  position: fixed;
+}
+
+header h2 {
+  width: 50px;
+  height: 250px;
+}
+
+main {
+  justify-content: space-around;
+}

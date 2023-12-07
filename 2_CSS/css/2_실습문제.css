@@ -1,0 +1,25 @@
+P {
+  font-weight: ;
+}
+
+.div-test {
+  margin: 0px;
+}
+
+#bc1 {
+  border: 1;
+  background-color: red;
+  text-align: center;
+}
+
+#bc2 {
+  border: 1;
+  background-color: purple;
+  text-align: center;
+}
+
+#bc3 {
+  border: 1;
+  background-color: yellow;
+  text-align: center;
+}
