@@ -1,5 +1,5 @@
-/*박스 모델*/
-/* withd, height*/
+/* 박스 모델 */
+/* width, height */
 .size-test {
   height: 200px;
   background-color: cadetblue;
@@ -11,8 +11,7 @@
   width: 50%;
 }
 
-/*display*/
-
+/* display */
 .display {
   width: 150px;
   height: 50px;
@@ -25,10 +24,10 @@
 .display-block {
   display: block;
 }
-.display-lnline-block {
+.display-inline-block {
   display: inline-block;
 }
-/* padding, margin*/
+/* padding, margin */
 .space {
   width: 100px;
   height: 100px;
@@ -38,55 +37,55 @@
   padding: 10px;
 }
 #padding2 {
-  /* top, bottom, left , right*/
+  /* top, bottom, left, right */
   padding-top: 50px;
   padding-right: 100px;
-  /*위/아래 : 50px ,  좌/우 : 30px*/
+
+  /* 위/아래 : 50px, 좌/우 : 30px */
   padding: 50px 30px;
-  /* 상 우 하 좌 : 시계방향*/
+
+  /* 상 우 하 좌 : 시계방향 */
   padding: 30px 50px 20px 40px;
 }
 #margin1 {
   margin: 50px;
 }
 #margin2 {
-  margin-top: 30px;
-}
-#margin2 {
   margin-top: 60px;
   margin-left: 20px;
-  /*위/아래 50px , 좌/우 30px*/
+  /* 위/아래 50px, 좌/우 30px */
   margin: 50px 30px;
   /* 상 우 하 좌 */
   margin: 30px 50px 20px 40px;
 }
-/* 테두리 스타일 / solid(어떤 유형인지: 직선형 ?)*/
-/* border : border-width border-*/
+
+/* 테두리 스타일 */
+/* border : border-width border-style border-color */
 .border {
   width: 100px;
   height: 100px;
-  /*solid : 테두리를 실선으로 표시*/
-  border: 10px solid;
+  /* solid : 테두리를 실선으로 표시 */
+  border: 10px solid black;
 }
 #border1 {
-  /* dashed: 테두리를 짧은 선으로 표시*/
+  /* dashed : 테두리를 짧은 선으로 표시 */
   border-style: dashed;
 }
 #border2 {
-  /* dotted: 테두리를 점선으로 표시*/
+  /* dotted : 테두리를 점선으로 표시 */
   border-style: dotted;
-  border-color: pink;
+  border-color: hotpink;
   border-color: hotpink yellow;
   border-color: hotpink yellow greenyellow red;
   border-right-color: blueviolet;
 }
-#border {
-  /* double : 테두리를 이중선으로 표시*/
+#border3 {
+  /* double : 테두리를 이중선으로 표시 */
   border-style: double;
-  /*border-radius : 테두리의 모서리를 둥글게 지정하는 속성*/
+  /* border-radius : 테두리의 모서리를 둥글게 지정하는 속성 */
   border-radius: 20px;
   border-radius: 50%;
-  /* top-left , top-right , bottom-right , bottom-left*/
+  /* top-left, top-right, bottom-left, bottom-right */
   border-top-left-radius: 30px;
 }
 
@@ -95,10 +94,11 @@
 .float {
   width: 100px;
   height: 100px;
-  border: 100px;
+  border: 1px solid;
   float: left;
 }
-/*position*/
+
+/* position */
 #outer {
   position: relative;
   top: 10px;
@@ -131,23 +131,22 @@
   height: 100px;
   background-color: blue;
 }
-
+/*visibility*/
 .visibility {
   width: 100px;
   height: 100px;
   border: 1px solid;
 }
-
 #vis1 {
-  visibility: hidden;
+  /* visibility: hidden; */
+  display: none;
   background-color: beige;
-  /*display: none;*/
 }
-
 #vis2 {
   background-color: skyblue;
 }
 
+/* z-index */
 #z-outer {
   position: relative;
   height: 250px;

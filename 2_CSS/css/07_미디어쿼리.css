@@ -10,7 +10,7 @@ h3 {
   font-size: 0;
 }
 #con-2::after {
-  content: "clear!";
+  content: "Clear!";
   clear: both;
   visibility: hidden;
   display: block;
@@ -25,31 +25,25 @@ h3 {
 .item-style-1 {
   background-color: paleturquoise;
 }
-
 .item-style-2 {
   background-color: palevioletred;
-  width: 60%;
 }
 
 .item-float {
   float: left;
 }
 
-.item-mediaquery {
-  float: left;
-}
-
 footer {
   background-color: darkgray;
   padding: 5%;
-  /*clear: both;*/
+  /* clear: both; */
 }
 
-/* 미디어 쿼리 */
+/* 미디어쿼리 */
 /*
- 700px 아래에 해당하는 화면 적용
+  700px 아래에 해당하는 화면 적용
 */
-/* 700px 이상부터 적용*/
+/* 700px 이상부터 적용 */
 @media screen and (min-width: 700px) {
   .item-mediaquery {
     float: left;
@@ -66,14 +60,12 @@ footer {
     display: block;
   }
   /* body {
-    background-color: black;
-  }
-} */
+    background: black;
+  } */
 }
-/* 1200px 이상부터 적용*/
+/* 1200px 이상부터 적용 */
 @media screen and (min-width: 1200px) {
   /* body {
-    background-color: red;
-  }
-} */
+    background: red;
+  } */
 }
