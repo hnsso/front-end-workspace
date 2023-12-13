@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>함수</h1>
+
+    <!-- 선언적 함수 -->
+    <script>
+      // function 함수명 (입력값=변수명(매개변수==파라미터)) {return 결과값 ;}
+      // 참고로 함수명 camelCase(낙타 표기법)을 사용한다 !!
+      function sample() {
+        console.log("ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ");
+      }
+      sample();
+
+      // a, b 라는 입력하겠다. 함수결과를 리턴으로 도출하겠다 !!
+      function plus(a, b) {
+        return a + b;
+      }
+      const result = plus(10, 20); // 30
+      console.log(plus(10, 20)); // 그래야지 console 에 출력 !
+
+      const sample1 = sample();
+      console.log(sample1); // undefined -> return 값이 없어서
+
+      // 두수의 값을 더하는 계산
+      console.log(plus(3, 7));
+      console.log(plus(4, 9));
+      console.log(plus(5, 6));
+    </script>
+
+    <!-- 변수의 유효범위(Scope) -->
+    <script>
+      const num1 = 100;
+
+      function sample2() {
+        const num1 = 200;
+        console.log("sample2 내부 : ${num1}");
+
+        function sample3() {
+          const num2 = 30000;
+        }
+      }
+
+      console.log("sample2 외부 : ${num1}"); // 100
+      //   console.log("num2 : ${num2}"); // 오류가 나온다 !! 안에 있는건 밖에서 오류가 난다.
+
+      sample2();
+    </script>
+
+    <!-- 익명 함수 -->
+    <script>
+      //  const 변수=  function (파라미터) {return 결과값;} 함수를 쓸려면 함수명이 필요하지만 사용가능하다
+      const minus = function (a, b) {
+        return a - b;
+      };
+
+      console.log(minus(70, 30)); // 40
+    </script>
+
+    <!-- 화살표 함수 -->
+    <script>
+      const minus2 = (a, b) => {
+        return a - b;
+      };
+      console.log(minus2(100, 30)); // 70
+    </script>
+
+    <!-- 배열.함수 (콜백함수) -->
+    <script>
+      const arr = [1, 2, 3, 4, 5, 6, 7];
+      // forEach : 값을 하나씩 가져올 수 있다 .
+      // 배열.forEach((값 , 인덱스 , 배열)=>{});
+      arr.forEach((date, index, array) => {
+        console.log(date);
+        console.log(index);
+        console.log(array);
+      });
+
+      // map : 리턴한 값들을 기반으로 새로운 배열을 만든다 .
+      // 배열.map((값 , 인덱스 , 배열)=>{});
+      const arr2 = arr.map(function (date) {
+        return date * 2;
+      });
+      console.log(arr2);
+
+      // filter : 리턴한 값들이 true인 것들만 모아서 새로운 배열을 만든다 .
+      // 배열.filter((값,인덱스,배열) => {});
+      const arr3 = arr.filter((date) => {
+        return date % 2 === 0;
+      });
+      console.log(arr3);
+
+      // reduce : 하나의 결과값을 반환한다 .
+      // 배열.reduce((누적된값 accum~ , 값 , 인덱스 , 배열)=>{},초기값);
+      const result2 = arr.reduce(function (accumulator, data) {
+        return accumulator + data;
+      }, 2);
+      console.log(result2); // 배열에 있는 값들이 다 합친 값
+    </script>
+  </body>
+</html>
