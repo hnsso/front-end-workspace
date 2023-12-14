@@ -17,7 +17,11 @@
       console.log(person2); // 거의 안 씀 !! //
 
       /* 변수 : 속성, 특징들 추가*/
+<<<<<<< Updated upstream
       person.name = "바이든";
+=======
+      person.name = "효도르";
+>>>>>>> Stashed changes
       person.age = 9;
 
       /* 함수 : 기능들 추가 */
@@ -26,15 +30,15 @@
         // this는 본인 (자기 자신)을 가리킨다.
       };
 
-      console.log(person); // {name: '조세미', age: 9, hello: ƒ}
+      console.log(person); // {name: '효도르', age: 9, hello: ƒ}
       console.log(person.age); // person의 age 값을 가져옴 ('9' 출력)
-      person.hello(); // 안녕? 나는 조세미이고, 나이는 9살 !
+      person.hello(); // 안녕? 나는 효도로이고, 나이는 9살 !
 
       const person3 = {
-        name: "조샘이",
+        name: "로보캅",
         age: 12,
         hello: function () {
-          console.log(`안녕? 나는 ${this.name}이고, 나이는 ${this.age}살!`); // 안녕? 나는 조샘이이고, 나이는 12살!
+          console.log(`안녕? 나는 ${this.name}이고, 나이는 ${this.age}살!`); // 안녕? 나는 로보갑이고, 나이는 12살!
         },
       };
 
@@ -43,7 +47,7 @@
       //객체 속 키 삭제!
       delete person3.hello;
 
-      console.log(person3); //  {name: '조샘이', age: 12}
+      console.log(person3); //  {name: '로보캅', age: 12}
       person3.hello;
 
       /*
