@@ -9,9 +9,13 @@
     <!-- 테스트는 자유! -->
     <!-- Q1. 세 수의 합을 구하는 함수를 만들어 주세요. -->
     <script>
-      function add(a, b, c) {
+      // function add(a, b, c) {
+      //   return a + b + c;
+      // }
+      const add = function (a, b, c) {
         return a + b + c;
-      }
+      };
+
       console.log(add(10, 20, 30)); // 60
       console.log(add(20, 30, 50)); // 100
     </script>
@@ -19,9 +23,13 @@
               삼각형의 넓이 = (삼각형의 너비 * 삼각형의 높이) / 2;
     -->
     <script>
-      const triangle = (a, b) => {
-        return (a * b) / 2;
-      };
+      function triangle(a1, b1) {
+        return (a1 * b1) / 2;
+      }
+
+      // const triangle = (a, b) => {
+      //   return (a * b) / 2;
+      // };
       console.log(triangle(5, 8)); // 20
       console.log(triangle(3, 8)); // 12
     </script>
@@ -30,25 +38,41 @@
              원의 넓이 = 반지름 * 반지름 * 3.14;
     -->
     <script>
-      const round = (a) => {
-        return 2 * a * 3.14;
-      };
-      const area = (a) => {
+      function round(r) {
+        return 2 * r * 3.14;
+      }
+      function area(r) {
         return a * a * 3.14;
-      };
+      }
+
+      // const round = (a) => {
+      //   return 2 * a * 3.14;
+      // };
+      // const area = (a) => {
+      //   return a * a * 3.14;
+      // };
 
       console.log(round(2)); // 12.56
       console.log(area(3)); // 28.26
     </script>
     <!-- Q4. 시작 수(n1)과 끝 수(n2)가 주어졌을 때 n1 ~ n2의 합계를 구하는 함수를 만들어 주세요 -->
     <script>
-      const sum = (a, b) => {
-        let aum = 0;
-        for (let i = a; i <= b; ++i) {
-          aum += i;
+      function sum(n1, n2) {
+        let total = 0;
+        for (let i = n1; i <= n2; i++) {
+          total += i;
         }
-        return aum;
-      };
+
+        return total;
+      }
+
+      // const sum = (a, b) => {
+      //   let aum = 0;
+      //   for (let i = a; i <= b; ++i) {
+      //     aum += i;
+      //   }
+      //   return aum;
+      // };
 
       console.log(sum(10, 20)); // 165
       console.log(sum(100, 200)); // 15150
@@ -73,6 +97,16 @@
 
       console.log(calculate(20000)); // 19000
       console.log(calculate(65000)); // 60125
+    </script>
+
+    <!--가변 매개변수 (파라미터) -->
+
+    <script>
+      function sum(){
+        console.log("sum!")
+
+        
+      }
     </script>
   </body>
 </html>
