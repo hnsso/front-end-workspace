@@ -90,12 +90,11 @@
 
     <script>
       function stringLength() {
-        const customer = document.querySelector("#customer");
-        const product = document.querySelector("#customer");
-        const price = document.querySelector("#customer");
-        console.log(customer.value);
-        console.log(product.value);
-        console.log(price.value);
+        const text = document.querySelector("#text1");
+        const result = document.querySelector("#result2");
+        // console.log(text.value.lenght);
+        // console.log(result);
+        result.innerHTML = `보기의 문자열 길이는 ${text.value.lenght} 글자 입니다.`;
       }
     </script>
 
@@ -121,9 +120,31 @@
 
     <script>
       function stringSplit() {
-        const id = document.querySelector("#result3");
-        const la1 = document.querySelector("#la1");
-        console.log(la1.innerHTML);
+        const label = document.querySelector("#la1"); // 라벨
+        const result = document.querySelector("#result3"); // 결과 값
+
+        const ol = document.createElement("ol"); // 그리고 난다음에 우리는 배열 해야한다 !! 그니깐 크리에트앨리먼트를 이용해서 추가
+        // const li = document.createElement("li");
+
+        const arr = label.innerHTML.split(",");
+        // console.log(label.innerHTML.split(",")); 너무 길어서 변수로 만들어서 보관 !
+
+        for (let data of arr) {
+          const li = document.createElement("li");
+          li.innerHTML = data;
+          ol.appendChild(li);
+        }
+
+        result.appendChild(ol);
+      }
+
+      // for (let i = 0; i < arr.lenght; i++) {} 밑에랑 같은거 !!
+
+      for (let i in arr) {
+        console.log(typeof i);
+        console.log(`${Number(i) + 1}. ${arr[i]}`);
+        result.innerHTML += `${Number(i) + 1}. ${arr[i]}
+        <br>`;
       }
     </script>
 
@@ -164,7 +185,28 @@
     <button onclick="arrayTest();">처리 및 출력</button>
 
     <script>
-      function arrayTest() {}
+      function arrayTest() {
+        const preview = document.querySelector("#preview");
+        const remove = document.querySelector("#remove");
+        const add = document.querySelector("#add");
+        const result = document.querySelector("#result4");
+
+        const arr = preview.innerHTML.split(" ");
+        console.log(arr); // 배열 부분
+        // 배열에서 인덱스 찾기
+        const index = arr.indexOf(remove.value);
+        // console.log(index);
+        // 배열에서 삭제
+        arr.splice(index, 1);
+
+        console.log(arr);
+
+        // 배열에 추가
+        arr.push(add.value);
+
+        console.log(arr.join(" "));
+        result.innerHTML = arr.join(" ");
+      }
     </script>
 
     <hr />
@@ -203,7 +245,33 @@
     </div>
 
     <script>
-      function addStudent() {}
+      function Student(name, age, addr) {
+        this.name = name;
+        this.age = age;
+        this.addr = addr;
+      }
+      function addStudent() {
+        // 여기까지 입력 !!
+        const arr = [];
+        for (let i = 0; i < 3; i++) {
+          const name = prompt(`${i + 1}번째 학생 이름 입력`);
+          const age = prompt(`${i + 1}번째 학생 나이 입력`);
+          const addr = prompt(`${i + 1}번째 학생 주소 입력`);
+          const Student = new Student(name, age, addr);
+          arr.push(student);
+        }
+        console.log(arr);
+      }
+      // 출력
+      const names = document.querySelectorAll(".name");
+      const ages = document.querySelectorAll(".age");
+      const addrs = document.querySelectorAll(".addr");
+
+      for (let i = 0; i < 3; ++i) {
+        names[i].innerHTML = arr[i].name;
+        ages[i].innerHTML = arr[i].age;
+        adds[i].innerHTML = arr[i].addr;
+      }
     </script>
   </body>
 </html>
