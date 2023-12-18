@@ -1,0 +1,10 @@
+body {
+  border: 1px rgb(104, 97, 97);
+  border-style: solid;
+  padding: 5px;
+  margin: 10px;
+}
+
+P {
+  color: gray;
+}
