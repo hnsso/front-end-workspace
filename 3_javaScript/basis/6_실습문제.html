@@ -14,8 +14,8 @@
              price / 11340
     -->
     <script>
-      // 생성자 함수 사용한다면 => 나는 틀을 만들어서 출력을 하겠다 !!
-      function book(title, author, publisher, price) {
+      // 생성자 함수
+      function Book(title, author, publisher, price) {
         this.title = title;
         this.author = author;
         this.publisher = publisher;
@@ -23,7 +23,7 @@
       }
       const b1 = new Book("하는 일마다 잘되리라", "전승환", "북로망스", 11340);
 
-      // class 함수
+      // 클래스
       class Book2 {
         constructor(title, author, publisher, price) {
           this.title = title;
@@ -32,9 +32,8 @@
           this.price = price;
         }
       }
-      const b2 = new Book("하는 일마다 잘되리라", "전승환", "북로망스", 11340);
+      const b2 = new Book2("하는 일마다 잘되리라", "전승환", "북로망스", 11340);
 
-      // 이걸 제일 많이 사용한다 !!!!!!!! 자바스크립에서는 !!!!!!!!!!
       const book = {
         title: "하는 일마다 잘되리라",
         author: "전승환",
@@ -52,19 +51,14 @@
       console.log(book.author);
     </script>
 
-    <!-- Q3. 객체 book에 showPrice 메서드(함수)를 추가한 다음 해당 메서드를 호출해서 출력하세요.
+    <!-- Q3. 객체 book에 showPrice 메서드를 추가한 다음 해당 메서드를 호출해서 출력하세요.
           예) 하는 일마다 잘되리라의 가격은 11340원 입니다.
     -->
     <script>
-      // 가급적으로 함수 내에서 직접 출력 금지 !
-      // console.log 테스트 용도로만 !!! 나중에 개발 다하면 console.log는 지워주자 !!
+      // 가급적으로 함수 내에서 직접 출력 금지!
+      // console.log 테스트 용도로만!
       book.showPrice = function () {
-        console.log(`${this.title}의 가격은${this.price}입니다`);
-      };
-      book.showPrice();
-
-      book.showPrice = function () {
-        return `${this.title}의 가격은${this.price}입니다`;
+        return `${this.title}의 가격은 ${this.price}원 입니다.`;
       };
       console.log(book.showPrice());
       document.write(book.showPrice());
@@ -81,7 +75,7 @@
           this.singer = singer;
         }
         desc() {
-          return `${this.singer}의 곡 ${this.title} 발표!`;
+          return `${this.singer}의 곡 '${this.title}' 발표!`;
         }
       }
       const music = new Music("Perfect Night", "르세라핌");
@@ -93,7 +87,8 @@
       Music.prototype.date = "2023.10.27";
       console.log(music.date); // 2023.10.27
     </script>
-    <!-- 구조 분해 할당 -> 객체-->
+
+    <!-- 구조 분해 할당 -> 객체 -->
     <script>
       const { title, author, publisher, price } = book;
       console.log(title);
@@ -104,19 +99,19 @@
 
     <!-- 키워드 파라미터 -->
     <script>
-      //애는 그냥 구조 분해 할당을 매개변수에서 바로사용
-      // 객체에서 사용하느 구조 분해 할당 (얘는 편리해요 !)
+      // 얘는 그냥 구조 분해 할당을 매개변수에서 바로 사용!
+      // 객체에서 사용하는 구조 분해 할당 (얘는 편리해요!)
       function read({ title, author, publisher, price }) {
-        // console.log(date);
-        return ` ${title}을 읽는다`;
+        // console.log(data);
+        return `${title}을 읽는다`;
       }
       console.log(read(book));
 
-      // 여기부터 키워드 파라미터
-      function write({ author, title }) {
+      // 여기부터 키워드 파라미터 (별로 안 써요!)
+      function write({ author = "테스트", title = "TEST" }) {
         return `${author}가 ${title}을 쓰다`;
       }
-      console.log(write({ author: "정회영", title: "오늘 오후에는 오신대요" }));
+      console.log(write({ author: "정회영" }));
     </script>
   </body>
 </html>
