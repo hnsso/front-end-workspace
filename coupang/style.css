@@ -1,0 +1,220 @@
+/* 여기저기 쓰이는 걸 지정가능 */
+:root {
+  --main-color: #4285f4;
+}
+
+.container {
+  width: 1020px;
+  margin: auto;
+}
+/* 너비에 반응형이 없어서 고정 시켰다*/
+
+/* tob-bar */
+.tob-bar {
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  padding: 10px;
+}
+/* 1.  flex를 사용한다 그러면 부모에게 준다 ! 2 . 너무 위아래 붙어있어서 간격 padding* /
+  
+  /* header */
+header {
+  display: flex;
+}
+/* 색깔 가져온거 css에서  */
+.category-btn {
+  cursor: pointer;
+  background-color: var(--main-color);
+  color: white;
+  width: 160px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.category-btn i {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+/* 정가운데 고정하는 2가지 같이 온는거 ! */
+.header-main {
+  width: 100%;
+}
+/* flex는 일단 나열 시킨다이다 */
+.header-main-top {
+  display: flex;
+  align-items: center;
+  margin: 30px;
+}
+.logo img {
+  width: 170px;
+}
+.header-main-top form {
+  border: 2px solid var(--main-color);
+  display: flex;
+  position: relative;
+  flex: 1;
+  margin: 0 20px;
+}
+/* 아이콘들을 위로 올리고 싶어서 ! */
+
+.header-main-top form input {
+  padding: 5px;
+  padding-right: 50px;
+  outline: none;
+  flex: 1;
+}
+.header-main-top form > i,
+.header-main-top form > button {
+  position: absolute;
+  font-size: 1.2rem;
+  height: 100%;
+  line-height: 100%;
+}
+.header-main-top form > i {
+  top: 0;
+  right: 30px;
+  display: flex;
+  align-items: center;
+  color: #999;
+}
+.header-main-top form > button {
+  top: 0;
+  right: 0;
+  color: var(--main-color);
+  background: none;
+  border: none;
+}
+.header-main-icon {
+  text-align: center;
+  margin-left: 15px;
+}
+.header-main-icon i {
+  color: #555;
+  margin-bottom: 10px;
+}
+.header-main-icon p {
+  font-size: 0.8rem;
+}
+/* header-main-bottom */
+
+/* 줄바꿈이 안되게하는 그리고 한줄로 만드는 white-space : nowrap */
+/* 끝에 감추기 ! */
+.header-main-bottom {
+  width: 880px;
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+}
+/* transform 으로 시작점 맞추기 */
+/* header-main-bottom-right 바로밑에 붙인 이유는 우선순위를 동등하게 하겠다 그리고 .a는 a태그로 가겠다는 의미이다. */
+
+.header-main-bottom a {
+  display: flex;
+  transform: translateX(30px);
+  align-items: center;
+  margin-right: 10px;
+  transition: 2s;
+}
+.header-main-bottom a.header-main-bottom-right {
+  transform: translateX(-375px);
+}
+.header-main-bottom img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+/* position에 absolute 을 쓸려면 부모에 position에 relative를 해야한다 무조건 조건이다 !  */
+.header-main-bottom i {
+  cursor: pointer;
+  background: white;
+  width: 30px;
+  height: 100%;
+  font-size: 1.2rem;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+.header-main-bottom i:first-child {
+  top: 0;
+  left: 0;
+}
+.header-main-bottom i:last-child {
+  top: 0;
+  right: 0;
+}
+
+/* 개발자 도구를 이용해서 정교하게 위치알아내기 */
+/* header - category */
+.category {
+  background: white;
+  border: 1px solid #eee;
+  position: absolute;
+  top: 155px;
+  display: flex;
+  /* display: none; */
+}
+.category-list {
+  margin: 10px;
+  width: 170px;
+}
+
+.category-item {
+  display: flex;
+  margin: 20px 0;
+}
+/* 마우스커서를 올려서 하는거는 hover로 이용하는게 좋다 !!  */
+.category-item:hover {
+  color: var(--main-color);
+}
+.category-item:hover span {
+  text-decoration: underline;
+}
+.category-item:hover i:last-child {
+  display: inline;
+}
+
+/* 옆으로 > 밀어버리기 */
+.category-item span {
+  flex: 1;
+}
+
+/* 카테코리 아이템 i 중 첫번째! */
+/* 아이콘도 텍스트 어라인이 먹힌다 !!! */
+.category-item i:first-child {
+  font-size: 1.2rem;
+  width: 40px;
+  text-align: center;
+}
+.category-item i:last-child {
+  display: none;
+}
+
+.category-sub {
+  position: relative;
+  background-color: pink;
+  width: 600px;
+  display: none;
+}
+
+.category-sub-item {
+  background-color: white;
+  width: 100%;
+  height: 435px;
+  top: 0;
+  right: 0;
+  position: absolute;
+  display: none;
+}
+
+.category-sub-item img {
+  position: absolute;
+  width: 450px;
+  bottom: 0;
+  right: 0;
+}
