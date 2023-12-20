@@ -1,5 +1,3 @@
-//  변수에 값을 저장하는데 쿼리로 선택자 지정하고 난 표현하겠다
-//  a (= 선택자) 태그들이 움직여야한다
 const navIcons = document.querySelectorAll(".header-main-bottom i");
 const aList = document.querySelectorAll(".header-main-bottom a");
 
@@ -14,36 +12,39 @@ navIcons[1].addEventListener("click", function () {
   });
 });
 
-// category 처음에 쿼리로 난 하겠다라고 정의 내리고 그리고 이벤트 설정하면 된다 ("이벤트" , 함수)
-const categoryBtn = document.querySelector(".category-btn");
+// main
+const mainImg = document.querySelectorAll("main > img");
 
-const category = document.querySelector(".category");
+// 첫번째 이미지에 main-img-active 클래스가 추가되어 있어요!
+setInterval(() => {
+  const className = "main-img-active";
+  for (let i = 0; i < mainImg.length; i++) {
+    // 첫번째 이미지에서는 클래스 제거, 두번째 이미지에 클래스 추가
+    // 두번째 이미지에서는 클래스 제거, 세번째 이미지에 클래스 추가
+    // 마지막 이미지에서는 클래스 제거, 첫번째 이미지에 클래스 추가
+    if (mainImg[i].classList.contains(className)) {
+      mainImg[i].classList.remove(className);
 
-categoryBtn.addEventListener("mouseenter", function () {
-  //   category.style.display = "block";
-  category.style.display = "flex";
-});
+      // 마지막번째만 예외로 처리!
+      if (i === mainImg.length - 1) {
+        mainImg[0].classList.add(className);
+        break;
+      }
 
-// categoryBtn.addEventListener("mouseleave", function () {
-//   category.style.display = "none";
-// });
+      mainImg[i + 1].classList.add(className);
+      break;
+    }
+  }
+}, 2000);
 
-category.addEventListener("mouseleave", function () {
-  category.style.display = "none";
-});
-
-const categoryItems = document.querySelectorAll(".category-item");
-
-const categorySub = document.querySelector(".category-sub");
-
-const categorySubItems = document.querySelectorAll(".category-sub-item");
-
-categoryItems.forEach((item) => {
-  item.addEventListener("mouseenter", function () {
-    categorySub.style.display = block;
-    categorySubItems[index].style.disply = "block";
-  });
-  item.addEventListener("mouseleave", function () {
-    categorySubItems[index].style.display = "none";
-  });
+// 사용자가 스크롤을 내리는 순간 어느 시점에 나타나고
+// 다시 올리면 사라지는..!
+const categoryMenu = document.querySelector(".category-menu");
+window.addEventListener("scroll", function () {
+  console.log(window.scrollY);
+  if (window.scrollY >= 1300) {
+    categoryMenu.style.display = "flex";
+  } else {
+    categoryMenu.style.display = "none";
+  }
 });
