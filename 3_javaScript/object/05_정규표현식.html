@@ -6,33 +6,32 @@
     <title>Document</title>
   </head>
   <body>
-    <h1>정규 표현식</h1>
+    <h1>정규표현식</h1>
+
     <h2>정규표현식과 함께 쓰이는 함수들</h2>
     <div id="area1"></div>
     <script>
-      const str1 = "html css javascript"; // 여기 13번째의 인덱스를 뱉어낸다 !! 그게 없으면 -1 을 뱉어낸다
+      const str1 = "html css javascript";
       const regExp1 = /script/;
-      area1.innerHTML += `regExp1.test(str1): ${regExp1.test(str1)}<br>`;
-      area1.innerHTML += `regExp1.exec(str1): ${regExp1.exec(str1)}<br>`;
-      area1.innerHTML += `str1.match(regExp1):${str1.match(regExp1)}<br>`;
-      area1.innerHTML += `str1.search(regExp1): ${str1.search(regExp1)}<br>`; // 시작인덱스
-      area1.innerHTML += `str1.replace(regExp1, 변경할 값): ${str1.replace(
+      area1.innerHTML += `regExp1.test(str1) : ${regExp1.test(str1)}<br>`;
+      area1.innerHTML += `regExp1.exec(str1) : ${regExp1.exec(str1)}<br>`;
+      area1.innerHTML += `str1.match(regExp1) : ${str1.match(regExp1)}<br>`;
+      area1.innerHTML += `str1.search(regExp1) : ${str1.search(regExp1)}<br>`;
+      area1.innerHTML += `str1.replace(regExp1, 변경할 값) : ${str1.replace(
         regExp1,
         "스크립트"
       )}<br>`;
-      area1.innerHTML += `str1.split(regExp1):${str1.split(regExp1)}<br>`;
+      area1.innerHTML += `str1.split(regExp1) : ${str1.split(regExp1)}`;
     </script>
 
     <h2>플래그 문자</h2>
     <div id="area2"></div>
     <script>
       const str2 = "HTML Css JAvaScript";
+      // replace 함수에서 '$&'는 패턴을 만족하는 문자열을 가리킴
       area2.innerHTML += `/c/ : ${str2.replace(/c/, "($&)")}<br>`;
-      // replace 함수에서 '$&' 는 패턴을 만족하는 문자열을 가리킴
       area2.innerHTML += `/c/i : ${str2.replace(/c/i, "($&)")}<br>`;
-      // i 는 대소문자 무시
       area2.innerHTML += `/s/g : ${str2.replace(/s/g, "($&)")}<br>`;
-      // g 는 전체적으로 s 를 다 찾는다 !!
       area2.innerHTML += `/s/ig(=gi) : ${str2.replace(/s/gi, "($&)")}`;
     </script>
 
@@ -42,48 +41,50 @@
     <script>
       const str3 = "a aa aaa aaaa";
       area3.innerHTML += `/a{1,2}/g : ${str3.replace(/a{1,2}/g, "($&)")}<br>`;
-      area3.innerHTML += `/a{3}/g : ${(str3, replace(/a{3}/g), "($&)")}<br>`;
-      area3.innerHTML += `/a{2,}/g : ${str3.replace(/a{2,}/g, "($&)")}<br>`; // ,를 하면 2개이상인거 찾겠다
-      area3.innerHTML += `/a+/g : ${str3.replace(/a+/g, "($&)")}<br>`; // 한개 이상인거 다 체크
-      area3.innerHTML += `/a?/g : ${str3.replace(/a?/g, "($&)")}<br>`; // ? 는 최대가 한글자 그리고 0 에서 부터 시작 그래서 {} 공백도 인식해서 0이다.
+      area3.innerHTML += `/a{3}/g : ${str3.replace(/a{3}/g, "($&)")}<br>`;
+      area3.innerHTML += `/a{2,}/g : ${str3.replace(/a{2,}/g, "($&)")}<br>`;
+      area3.innerHTML += `/a+/g : ${str3.replace(/a+/g, "($&)")}<br>`;
+      area3.innerHTML += `/a?/g : ${str3.replace(/a?/g, "($&)")}<br>`;
     </script>
 
-    <h3>문자열의 앞 , 뒤 구분</h3>
+    <h3>문자열의 앞, 뒤 구분</h3>
     <div id="area4"></div>
     <script>
-      const str4 = "Javascript\nJQuery\nAjax\nReact";
-      area4.innerHTML += `/^j/ig : ${str4.replace(/^j/gi, "($&)")}<br>`; // ^(시작을 이걸로 하겠다!)j로 시작하냐 ? 그러면 ()찾는다 시작을 뭘로 할거냐 ?
-      area4.innerHTML += `/ct$/ig : ${str4.replace(/ct$/gi, "($&)")}<br>`; // 무조건 ct로 끝나는지
+      const str4 = "Javascript\njQuery\nAjax\nReact";
+      area4.innerHTML += `/^j/ig : ${str4.replace(/^j/gi, "($&)")}<br>`;
+      area4.innerHTML += `/ct$/ig : ${str4.replace(/ct$/gi, "($&)")}`;
     </script>
 
     <h3>OR 검색</h3>
-    <div id="area4"></div>
+    <div id="area5"></div>
     <script>
-      let str5 = "Javascript JQuery Ajax";
-      // [] 내의 ^는 not를 의미한다 .
-      area5.innerHTML += `/[^aj]/ig : ${str5.replace(/[^aj]/gi, "($&)")}<br>`; //[] a 또는 j 를 의미하는 []안에 ^은 맞는거
+      let str5 = "aavascript jQuery Ajax";
+      area5.innerHTML += `/[aj]/ig : ${str5.replace(/[aj]/gi, "($&)")}<br>`;
+      // [] 내의 ^는 not을 의미
+      area5.innerHTML += `/[^aj]/ig : ${str5.replace(/[^aj]/gi, "($&)")}<br>`;
 
-      str5 = "123 Javascript";
-      area5.innerHTML += `/[a-z]/g : ${str5.replace(/[a-z]/g, "($&)")}`; // 소문자만
-      area5.innerHTML += `/[A-Z]/g : ${str5.replace(/[A-Z]/g, "($&)")}`; // 대문자만
-      area5.innerHTML += `/[0-9]/g : ${str5.replace(/[0-9]/g, "($&)")}`; //  숫자만
+      str5 = "123 JavaScript";
+      area5.innerHTML += `/[a-z]/g : ${str5.replace(/[a-z]/g, "($&)")}<br>`;
+      area5.innerHTML += `/[A-Z]/g : ${str5.replace(/[A-Z]/g, "($&)")}<br>`;
+      area5.innerHTML += `/[0-9]/g : ${str5.replace(/[0-9]/g, "($&)")}<br>`;
       area5.innerHTML += `/[0-9A-Za-z]/g : ${str5.replace(
         /[0-9A-Za-z]/g,
         "($&)"
-      )}`; //  숫자랑 대문자다 !!
+      )}<br>`;
     </script>
 
     <h3>임의의 문자열 검색</h3>
     <div id="area6"></div>
     <script>
-      const str = "123 JavaScript";
-      area6.innerHTML += `/..../g ,${str6.replace(/..../g, "($&)")} `; // . 개수 만큼 컷
+      const str6 = "123 JavaScript";
+      area6.innerHTML += `/..../g : ${str6.replace(/..../g, "($&)")}`;
     </script>
 
     <h3>추가 메타 문자</h3>
     <div id="area7"></div>
     <script>
-      const str7 = "A1 B2 C3 d_4 e:5 ` ffgg77--__-- ` \t가\n나\다";
+      const str7 = "A1 B2 C3 d_4 e:5 ` ffgg77--__-- `\t가\n나\n다";
+
       // /[0-9]/g 와 결과가 같다
       area7.innerHTML += `/\d/g : ${str7.replace(/\d/g, "($&)")}<br>`;
       area7.innerHTML += `/\D/g : ${str7.replace(/\D/g, "($&)")}<br>`;
@@ -96,39 +97,41 @@
     <h2>연습</h2>
     <h3>주민등록번호 확인</h3>
     <div id="area8">
-     <input type = "text" placeholder= "-포함해서 입력하시오" id="pno"/>
-      <button> 확인 <button>
+      <input type="text" placeholder="-포함해서 입력하시오" id="pno" />
+      <button>확인</button>
     </div>
     <script>
-        const btn = document.querySelector("button");
-        // 1단계 : 6글자-7글자
-        // 문제점 : 숫자 외의 다른 문자가 와도 글자수만 맞아도 
-        let regExp = /^......-.......$/;
-        // 2단계 : 숫자값6개-숫자값7개([1234]숫자값 6개)
-        // 문제점 : 유효하지 않는 월 , 일을 입력해도 ...
-        regExp= /^\d{6}-[1-4]\d{6]$/;
-        
-        // 3단계 : 
-        /*
-            - 생년 (두자리) => 아무 숫자로 두자리만 채우면됨 : \d{2}
-            - 생월 (두자리) 
-                => 앞자리가 0일 경우랑 뒷자리는  1~9까지 : 0[1-9]
-                => 앞자리가 1일 경우 뒷자리는 0~2까지 : 1[0-2]
-            - 일   (두자리)
-                => 엎자리가 0일 경우 뒷자리는 1~9까지 0[1-9]
-                => 앞자리 1 또는 2일 경우 뒷자리는 0~09까지 : [1-2][0-9]
-                => 앞자리가 3일 경우 뒷자리는 0~1까지 :3[0-1]
-        */
-    regExp= /^\d{2}(0[1-9]|1[0-2])(0[1-9]|[1-2][0-9]|3[0-1]-[1-4]\d{6]$/;
-        btn.addEventListener("click", function(){
-            if(regExp.test(pno.value)){
-                alert("정상 입력!");
-              }  else {
-                    alert("잘못 입력!");}
-            });
-        const arr = "0 1 2 3 4 5 6 7 8 9"
-        area8.innerHTML += `/^\d{6}-\d{7}$/g,${arr.replace(/......-......./g,"$&")}`
+      const btn = document.querySelector("button");
+      // 1단계 : 6글자-7글자
+      // 문제점 : 숫자 외의 다른 문자가 와도 글자수만 맞아도
+      let regExp = /^......-.......$/;
 
+      // 2단계 : 숫자값6개-숫자값7개([1234]숫자값6개)
+      // 문제점 : 유효하지 않는 월, 일을 입력해도...
+      regExp = /^\d{6}-[1-4]\d{6}$/;
+
+      // 3단계 :
+      /*
+            - 생년 (두자리) => 아무 숫자로 두자리만 채우면 됨 : \d{2}
+
+            - 생월 (두자리)
+                => 앞자리가 0일 경우 뒷자리는 1~9까지 : 0[1-9]
+                => 앞자리가 1일 경우 뒷자리는 0~2까지 : 1[0-2]
+            - 일 (두자리)
+                => 앞자리가 0일 경우 뒷자리는 1~9까지 : 0[1-9]
+                => 앞자리가 1 또는 2일 경우 뒷자리는 0~9까지 : [1-2][0-9]
+                => 앞자리가 3일 경우 뒷자리는 0~1까지 : 3[0-1]
+      */
+      regExp = /^\d{2}(0[1-9]|1[0-2])(0[1-9]|[1-2][0-9]|3[0-1])-[1-4]\d{6}$/;
+      btn.addEventListener("click", function () {
+        if (regExp.test(pno.value)) {
+          alert("정상 입력!");
+        } else {
+          alert("잘못 입력!");
+        }
+      });
     </script>
+
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
   </body>
 </html>
