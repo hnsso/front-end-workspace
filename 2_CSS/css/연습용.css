@@ -1,53 +1,69 @@
 header {
-  background-color: white;
-  width: 100%;
-  height: 60px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  width: 400px;
+  height: 100vh;
+  background-image: url(../css/resources/background.jpg);
+  background-size: cover;
+  background-position: center;
   position: fixed;
 }
 
-header h1 {
-  font-size: 20px;
-  margin-left: 20px;
+.header-blackbox {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(101, 94, 94, 0.5);
+}
+
+.header-content {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+}
+
+header h2 {
+  border-bottom: 2px solid white;
   font-weight: bold;
+  font-size: 5rem;
+  text-align: center;
+  width: 70%;
+  margin-top: 80px;
 }
 
 header nav {
-  display: flex;
-  margin-right: 20px;
+  margin-bottom: 100px;
 }
 
 header nav a {
-  padding: 10px;
-  display: inline-block;
+  color: white;
+  display: block;
 }
 
 main {
-  position: absolute;
+  padding: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  padding-left: 420px;
+}
+
+main h2 {
+  font-weight: bold;
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+main img {
+  width: 100%;
+  max-width: 800px;
+  margin-bottom: 20px;
   align-items: center;
 }
 
-#section1 {
-  height: 100%;
-  background-color: red;
-  display: flex;
-  align-items: center;
-}
-
-#section2 {
-  height: 100%;
-  background-color: purple;
-  display: flex;
-  align-items: center;
-}
-
-#section3 {
-  background-color: yellow;
-  display: flex;
-  align-items: center;
+main p {
+  line-height: 1.8;
 }
