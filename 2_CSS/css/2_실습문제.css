@@ -15,6 +15,7 @@ header h1 {
   margin-left: 20px;
   font-size: 20px;
   font-weight: bold;
+  font-style: calc();
 }
 
 header nav {
@@ -31,12 +32,21 @@ header nav a {
   padding: 10px;
   box-sizing: border-box;
 }
+<<<<<<< Updated upstream
 
 header nav a:hover {
   color: red;
   background-color: black;
   color: white;
 }
+=======
+/* 
+/* header nav a:hover {
+  /* color: red; */
+/* background-color: black;
+  color: white; */
+/* } */
+>>>>>>> Stashed changes
 
 main {
   padding-top: 60px;
