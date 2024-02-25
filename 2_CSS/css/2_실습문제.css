@@ -32,21 +32,12 @@ header nav a {
   padding: 10px;
   box-sizing: border-box;
 }
-<<<<<<< Updated upstream
 
 header nav a:hover {
   color: red;
   background-color: black;
   color: white;
 }
-=======
-/* 
-/* header nav a:hover {
-  /* color: red; */
-/* background-color: black;
-  color: white; */
-/* } */
->>>>>>> Stashed changes
 
 main {
   padding-top: 60px;
