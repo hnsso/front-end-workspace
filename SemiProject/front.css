@@ -3,6 +3,10 @@
   padding: 0%;
 }
 
+section {
+  height: 100vh;
+}
+
 header {
   position: fixed;
   width: 100%;
@@ -16,7 +20,7 @@ header {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.75);
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 header a {
@@ -40,19 +44,19 @@ header a {
 
 .container2 video {
   position: absolute;
-  min-width: 100%;
-  width: auto;
-  height: auto;
+  height: 100%;
   z-index: -1;
+  width: 100%;
+  object-fit: cover;
 }
 
 .directivity .h1 {
   position: absolute;
-  top: 500px;
+  top: 600px;
   left: 50px;
-  font-size: 4rem;
-  color: black;
-  animation: slide1 1.5s;
+  font-size: 5rem;
+  color: white;
+  animation: slide1 1.8s;
 }
 
 @keyframes slide1 {
@@ -66,33 +70,30 @@ header a {
 
 .directivity .h2 {
   position: absolute;
-  top: 570px;
-  left: 300px;
-  font-size: 4rem;
-  color: black;
-  animation: slide2 1.6s;
+  top: 700px;
+  left: 400px;
+  font-size: 5rem;
+  color: white;
+  animation: slide2 1.9s;
 }
 
 @keyframes slide2 {
   from {
-    left: -300px;
+    left: -200px;
   }
   to {
-    left: 300px;
+    left: 400px;
   }
 }
 
 .directivity a h1 {
   position: absolute;
-  top: 650px;
-  left: 60px;
-  color: black;
+  top: 850px;
+  left: 70px;
+  color: white;
   line-height: inherit;
   cursor: pointer;
-  border: solid;
-  border-radius: 10px;
-  padding: 5px;
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 .container2 nav {
@@ -120,4 +121,56 @@ header a {
 .container2 nav a {
   padding: 10px;
   color: white;
+}
+
+#section2 {
+  background-color: white;
+  width: 100%;
+  height: 100vh;
+}
+
+#section2 h1 {
+  position: absolute;
+  left: 1450px;
+  padding-top: 50px;
+  font-size: 3rem;
+  line-height: 1;
+  border-bottom: solid;
+}
+
+#section2 p {
+  width: 90%;
+  position: absolute;
+  font-size: 1.5rem;
+  padding-left: 950px;
+  padding-top: 300px;
+}
+
+#container3 img {
+  width: 45%;
+  height: 50%;
+  padding-top: 200px;
+  padding-left: 50px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: black;
+  margin-top: 200px;
+}
+
+#section3 {
+  background-color: blue;
+}
+
+#section4 {
+  background-color: white;
+  width: 100%;
+  height: 70vh;
+}
+
+footer {
+  width: 100%;
+  height: 30vh;
+  background-color: bisque;
 }
