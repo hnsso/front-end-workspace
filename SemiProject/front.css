@@ -58,9 +58,15 @@ header nav:nth-child(2) a {
   position: absolute;
   top: 600px;
   left: 50px;
+<<<<<<< Updated upstream
   font-size: 5rem;
   color: white;
   animation: slide1 1.8s;
+=======
+  font-size: 4rem;
+  color: white;
+  animation: slide1 1.5s;
+>>>>>>> Stashed changes
 }
 
 @keyframes slide1 {
@@ -74,11 +80,19 @@ header nav:nth-child(2) a {
 
 .directivity .h2 {
   position: absolute;
+<<<<<<< Updated upstream
   top: 700px;
   left: 400px;
   font-size: 5rem;
   color: white;
   animation: slide2 1.9s;
+=======
+  top: 570px;
+  left: 300px;
+  font-size: 4rem;
+  color: white;
+  animation: slide2 1.6s;
+>>>>>>> Stashed changes
 }
 
 @keyframes slide2 {
@@ -92,8 +106,13 @@ header nav:nth-child(2) a {
 
 .directivity a h1 {
   position: absolute;
+<<<<<<< Updated upstream
   top: 850px;
   left: 70px;
+=======
+  top: 650px;
+  left: 60px;
+>>>>>>> Stashed changes
   color: white;
   line-height: inherit;
   cursor: pointer;
@@ -130,6 +149,7 @@ header nav:nth-child(2) a {
     right: 0px;
   }
 }
+<<<<<<< Updated upstream
 /* ------------------------------------Main Section 2-------------------------------------- */
 #section2 {
   background-color: #f5fffa;
@@ -332,5 +352,13 @@ footer .SNS {
 }
 
 .SNS a:hover i {
+=======
+.container2 nav {
+  position: fixed;
+}
+
+.container2 nav a {
+  padding: 30px;
+>>>>>>> Stashed changes
   color: white;
 }
