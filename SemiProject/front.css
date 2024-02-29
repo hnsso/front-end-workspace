@@ -18,15 +18,6 @@ header {
   z-index: 1;
 }
 
-/* ------------------------------------Main Section 1-------------------------------------- */
-
-.header-blackbox {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
-}
-
 header a {
   color: white;
   font-style: italic;
@@ -44,6 +35,15 @@ header nav:nth-child(2) {
 header nav:nth-child(2) a {
   padding: 20px;
   font-size: 1.5rem;
+}
+
+/* -----------------------------------Main Section 1-------------------------------------- */
+
+.header-blackbox {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 #section1 video {
@@ -111,6 +111,7 @@ header nav:nth-child(2) a {
   font-size: 2rem;
   padding: 20px;
   animation: slide3 2s;
+  z-index: 1;
 }
 
 #section1 nav a {
@@ -293,24 +294,24 @@ header nav:nth-child(2) a {
 
 /* --------------------------------------- Footer -------------------------------------- */
 
-.footer top {
+.footer_top {
   position: absolute;
   width: 100%;
-  height: 20vh;
+  /* height: 20vh; */
   background-color: #f5fffa;
 }
 
 footer li {
   font-size: 1.7rem;
   font-weight: bold;
-  padding-top: 15px;
-  padding-left: 35px;
+  /* padding-top: 15px;
+  padding-left: 35px; */
   color: black;
 }
 
 footer p {
-  padding-left: 80px;
-  padding-top: 10px;
+  /* padding-left: 80px;
+  padding-top: 10px; */
   font-size: 1rem;
   font-style: italic;
   font-weight: bold;
@@ -318,7 +319,7 @@ footer p {
 
 footer .personal a {
   position: relative;
-  top: -50px;
+  /* top: -50px; */
   font-size: 1.2rem;
   padding-left: 1650px;
   color: black;
@@ -326,9 +327,9 @@ footer .personal a {
 
 footer .SNS {
   font-size: 3rem;
-  padding-left: 1200px;
+  /* padding-left: 1200px; */
   position: relative;
-  top: -100px;
+  /* top: -100px; */
 }
 
 .SNS a:hover i {
