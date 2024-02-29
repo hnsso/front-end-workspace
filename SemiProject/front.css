@@ -113,7 +113,7 @@ header nav:nth-child(2) a {
   font-size: 2rem;
   padding: 20px;
   animation: slide3 2s;
-  z-index: 1;
+  z-index: 999;
 }
 
 #section1 nav a {
@@ -294,70 +294,59 @@ header nav:nth-child(2) a {
 #section4 {
   background-color: rgb(229, 227, 219);
   width: 100%;
-  height: 60vh;
 }
 
 /* --------------------------------------- Footer -------------------------------------- */
 
 footer {
-  background-color: rgb(229, 227, 219);
-  width: 100%;
-  height: 40vh;
-}
-
-hr {
   position: relative;
-  width: 1925px;
+  display: flex;
+  justify-content: space-between;
+  top: 550px;
 }
 
 .row_left {
   position: relative;
-  width: 700px;
-  left: 100px;
-  top: 10px;
+  bottom: -2px;
+  left: 120px;
+  top: 80px;
 }
-.row h3 {
-  font-size: 4.5rem;
-  font-weight: bolder;
+
+.row_left h3 {
+  width: 60%;
+  font-size: 5rem;
+  font-weight: bold;
 }
 
 .row_left a {
+  font-size: 3.5rem;
+}
+
+.row_left p {
   position: relative;
-  font-size: 4rem;
-  color: black;
+  font-size: 5rem;
+  right: 80px;
+  width: 10%;
+  margin-bottom: 1rem;
+  left: -82px;
 }
 
-.row_left i {
-  position: relative;
-  font-size: 4.5rem;
-  top: -11px;
-  left: -78px;
-}
-
-.row_left i:hover {
-  color: white;
-}
-
-.row_center ul {
+.row_center {
   position: relative;
   font-size: 2rem;
-  color: black;
-  left: 1100px;
-  bottom: 350px;
+  right: 200px;
+  top: 100px;
 }
 
-.row_SNS ul {
+.row_SNS {
   position: relative;
   font-size: 2rem;
-  color: black;
-  left: 1500px;
-  bottom: 670px;
+  right: 200px;
+  top: 100px;
 }
 
 .impormation {
   position: relative;
-  font-size: 1.7rem;
-  color: black;
-  left: 1650px;
-  bottom: 630px;
+  font-size: 1.3rem;
+  right: 200px;
 }
