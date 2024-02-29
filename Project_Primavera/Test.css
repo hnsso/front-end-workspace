@@ -107,7 +107,12 @@ header a {
   font-size: 2rem;
   padding: 20px;
   animation: slide3 2s;
-}
+}:-ms-fullscreen+
+
+
+
+
+
 
 @keyframes slide3 {
   from {
