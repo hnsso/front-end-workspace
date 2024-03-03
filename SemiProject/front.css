@@ -19,7 +19,7 @@ header {
   justify-content: space-between;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.6);
-  z-index: 1;
+  z-index: 2;
 }
 
 header a {
@@ -162,7 +162,6 @@ header nav:nth-child(2) a {
   width: 50%;
   padding-top: 228px;
   padding-left: 200px;
-  z-index: -1;
 }
 
 .carousel-control-prev-icon,
@@ -178,6 +177,7 @@ header nav:nth-child(2) a {
   height: 100vh;
   background-color: rgb(193, 193, 191);
   border-radius: 25px;
+  z-index: 2;
 }
 
 .container1 h1 {
@@ -217,11 +217,19 @@ header nav:nth-child(2) a {
 
 .container2 h1 {
   position: absolute;
-  padding-top: 370px;
+  top: 2400px;
   font-size: 4rem;
   padding-left: 1020px;
   border-bottom: solid;
   animation: slide5 1.5s;
+}
+
+.container2 li {
+  position: relative;
+  width: 580px;
+  font-size: 2rem;
+  left: 1300px;
+  bottom: 480px;
 }
 
 @keyframes slide5 {
@@ -233,12 +241,22 @@ header nav:nth-child(2) a {
   }
 }
 
+.container-blackbox {
+  position: relative;
+  left: 1171px;
+  width: 752px;
+  height: 451px;
+  top: -60px;
+  background-color: rgba(0, 0, 0, 0.245);
+  z-index: 1;
+}
+
 .container2 img {
   position: relative;
-  width: 500px;
-  height: 350px;
-  left: 1300px;
-  top: 200px;
+  width: 752px;
+  height: 451px;
+  left: 1171px;
+  bottom: 511px;
 }
 
 #section3 {
@@ -255,8 +273,7 @@ header nav:nth-child(2) a {
   position: relative;
   width: 100%;
   font-size: 11rem;
-  padding-top: 250px;
-  top: -200px;
+  top: -550px;
   opacity: 50%;
   animation: slide6 2s;
 }
@@ -274,7 +291,7 @@ header nav:nth-child(2) a {
   position: relative;
   width: 100%;
   font-size: 11rem;
-  top: -300px;
+  top: -650px;
   left: 300px;
   opacity: 50%;
   animation: slide7 2s;
@@ -296,38 +313,91 @@ header nav:nth-child(2) a {
   width: 100%;
 }
 
+.line1 {
+  left: 50px;
+  width: 93%;
+  border-bottom: 1px solid;
+  position: relative;
+  top: 90px;
+}
+
+.section4_login {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 270px;
+}
+
+#title {
+  position: relative;
+  left: 80px;
+}
+
+#title h2 {
+  font-size: 3.5rem;
+  font-weight: bolder;
+}
+
+#title p {
+  font-size: 1.5rem;
+}
+
+.section4_login a {
+  position: relative;
+  border-radius: 100px;
+  padding: 12px 24px;
+  right: 250px;
+  box-sizing: border-box;
+  color: black;
+  background-color: wwhite;
+  font-size: 3rem;
+  cursor: pointer;
+}
+
+.section4_login a:hover {
+  background-color: black;
+  color: white;
+}
+
 /* --------------------------------------- Footer -------------------------------------- */
+
+.line2 {
+  left: 50px;
+  width: 93%;
+  border-bottom: 1px solid;
+  position: relative;
+  top: 450px;
+}
 
 footer {
   position: relative;
   display: flex;
   justify-content: space-between;
-  top: 550px;
+  top: 370px;
 }
 
 .row_left {
   position: relative;
-  bottom: -2px;
   left: 120px;
-  top: 80px;
+  top: 130px;
 }
 
 .row_left h3 {
   width: 60%;
-  font-size: 5rem;
+  font-size: 4rem;
   font-weight: bold;
 }
 
 .row_left a {
-  font-size: 3.5rem;
+  font-size: 2.5rem;
 }
 
 .row_left p {
   position: relative;
-  font-size: 5rem;
+  font-size: 4rem;
   right: 80px;
   width: 10%;
-  margin-bottom: 1rem;
   left: -82px;
 }
 
@@ -335,18 +405,20 @@ footer {
   position: relative;
   font-size: 2rem;
   right: 200px;
-  top: 100px;
+  top: 130px;
 }
 
 .row_SNS {
   position: relative;
   font-size: 2rem;
   right: 200px;
-  top: 100px;
+  top: 130px;
 }
 
 .impormation {
   position: relative;
-  font-size: 1.3rem;
-  right: 200px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  right: 100px;
+  top: 140px;
 }
