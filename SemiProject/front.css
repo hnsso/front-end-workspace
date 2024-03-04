@@ -46,13 +46,13 @@ header nav:nth-child(2) a {
 .header-blackbox {
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background-color: rgba(0, 0, 0, 0.6);
 }
 
 #section1 video {
   position: absolute;
-  height: 100%;
+  height: 100vh;
   z-index: -1;
   width: 100%;
   object-fit: cover;
@@ -104,8 +104,6 @@ header nav:nth-child(2) a {
 
 #section1 nav {
   position: fixed;
-  width: 100%;
-  height: 100%;
   display: flex;
   justify-content: center;
   align-items: last baseline;
@@ -114,6 +112,9 @@ header nav:nth-child(2) a {
   padding: 20px;
   animation: slide3 2s;
   z-index: 999;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 #section1 nav a {
@@ -142,8 +143,8 @@ header nav:nth-child(2) a {
 
 #section2 h1 {
   position: absolute;
-  left: 1450px;
-  padding-top: 100px;
+  left: 1351px;
+  padding-top: 124px;
   font-size: 3rem;
   line-height: 1;
   border-bottom: solid;
@@ -153,8 +154,8 @@ header nav:nth-child(2) a {
   width: 85%;
   position: absolute;
   font-size: 1.5rem;
-  padding-left: 1133px;
-  padding-top: 370px;
+  padding-left: 1139px;
+  padding-top: 330px;
 }
 
 #container3 img {
@@ -168,6 +169,10 @@ header nav:nth-child(2) a {
 .carousel-control-next-icon {
   background-color: black;
   margin-top: 200px;
+}
+
+.carousel-fade .carousel-item {
+  background-color: rgb(229, 227, 219);
 }
 
 /* ------------------------------------Main Section 3-------------------------------------- */
@@ -243,8 +248,8 @@ header nav:nth-child(2) a {
 
 .container-blackbox {
   position: relative;
-  left: 1171px;
-  width: 752px;
+  left: 1126px;
+  width: 696px;
   height: 451px;
   top: -60px;
   background-color: rgba(0, 0, 0, 0.245);
@@ -253,9 +258,9 @@ header nav:nth-child(2) a {
 
 .container2 img {
   position: relative;
-  width: 752px;
+  width: 696px;
   height: 451px;
-  left: 1171px;
+  left: 1126px;
   bottom: 511px;
 }
 
@@ -332,6 +337,7 @@ header nav:nth-child(2) a {
 #title {
   position: relative;
   left: 80px;
+  bottom: 80px;
 }
 
 #title h2 {
@@ -345,14 +351,14 @@ header nav:nth-child(2) a {
 
 .section4_login a {
   position: relative;
-  border-radius: 100px;
-  padding: 12px 24px;
   right: 250px;
+  display: flex;
+  justify-content: center;
   box-sizing: border-box;
+  padding: 20px;
   color: black;
-  background-color: wwhite;
   font-size: 3rem;
-  cursor: pointer;
+  bottom: 90px;
 }
 
 .section4_login a:hover {
@@ -367,20 +373,20 @@ header nav:nth-child(2) a {
   width: 93%;
   border-bottom: 1px solid;
   position: relative;
-  top: 450px;
+  top: 300px;
 }
 
 footer {
   position: relative;
   display: flex;
   justify-content: space-between;
-  top: 370px;
+  top: 250px;
 }
 
 .row_left {
   position: relative;
   left: 120px;
-  top: 130px;
+  top: 110px;
 }
 
 .row_left h3 {
@@ -405,14 +411,14 @@ footer {
   position: relative;
   font-size: 2rem;
   right: 200px;
-  top: 130px;
+  top: 90px;
 }
 
 .row_SNS {
   position: relative;
   font-size: 2rem;
   right: 200px;
-  top: 130px;
+  top: 90px;
 }
 
 .impormation {
@@ -420,5 +426,5 @@ footer {
   font-size: 1.2rem;
   font-weight: bold;
   right: 100px;
-  top: 140px;
+  top: 90px;
 }
