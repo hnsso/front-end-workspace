@@ -1,0 +1,82 @@
+* {
+  margin: 0%;
+  padding: 0%;
+}
+
+a {
+  pointer-events: auto;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 2;
+}
+
+header a {
+  color: white;
+  font-style: italic;
+}
+
+header nav:nth-child(1) {
+  margin-left: 50px;
+  font-size: 2.5rem;
+  font-weight: lighter;
+}
+header nav:nth-child(2) {
+  padding: 30px;
+}
+
+header nav:nth-child(2) a {
+  padding: 20px;
+  font-size: 1.5rem;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header h1 {
+  position: relative;
+  width: 132px;
+  font-size: 2rem;
+  bottom: 300px;
+  border-bottom: solid 1px;
+  left: 200px;
+}
+.table {
+  width: 100%;
+}
+
+tbody td {
+  display: flex;
+  justify-content: center;
+}
+
+tr {
+  width: 100%;
+}
+
+.line1 {
+  left: 50px;
+  width: 93%;
+  border-bottom: 1px solid;
+  position: relative;
+  top: 90px;
+}
+
+.line2 {
+  left: 50px;
+  width: 93%;
+  border-bottom: 1px solid;
+  position: relative;
+  top: 300px;
+}
