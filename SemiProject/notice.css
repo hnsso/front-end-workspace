@@ -1,9 +1,87 @@
 * {
-  margin: 0;
-  padding: 0;
-  width: 100vh;
-  height: 20vh;
+  margin: 0%;
+  padding: 0%;
 }
 
-form {
+header {
+  position: fixed;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+header nav:nth-child(1) {
+  margin-left: 50px;
+  font-size: 2.5rem;
+  font-weight: lighter;
+}
+header nav:nth-child(2) {
+  padding: 30px;
+}
+
+header nav:nth-child(2) a {
+  padding: 20px;
+  font-size: 1.5rem;
+}
+
+.header h1 {
+  position: relative;
+  width: 130px;
+  font-size: 2rem;
+  bottom: 34px;
+  border-bottom: solid 2px;
+  left: 129px;
+}
+
+header a {
+  color: white;
+  font-style: italic;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
+}
+
+div.container {
+  position: relative;
+  top: 190px;
+}
+
+div .header a {
+  position: relative;
+  top: 568px;
+  color: black;
+  left: 127px;
+  font-size: 1.5rem;
+}
+
+.container {
+  display: flex;
+}
+
+.table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-size: 1.5rem;
+  width: 1000px;
+  top: 72px;
+  right: 454px;
+  position: relative;
+}
+
+.header p {
+  text-decoration: underline;
+  width: 600px;
+  top: 600px;
+}
+
+.pagination {
+  display: flex;
+  position: relative;
+  top: 600px;
+  font-size: 1.5rem;
+  left: 350px;
 }

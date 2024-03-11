@@ -1,35 +1,90 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Insert title here</title>
     <link rel="stylesheet" href="../SemiProject/reset.css" />
     <link rel="stylesheet" href="../SemiProject/notice.css" />
   </head>
   <body>
-    <h1>공지사항</h1>
-    <form action="/write" method="post" enctype="multipart/form-data">
-      <div class="form-group">
-        <label>제목</label>
-        <input class="form-control" name="title" />
+    <div class="header-blackbox"></div>
+    <header>
+      <nav>
+        <a href="#">Primavera</a>
+      </nav>
+      <nav>
+        <a href="#">Store</a>
+        <a href="#">Guid</a>
+        <a href="collectPage">PickUp</a>
+        <a href="listpage">Board</a>
+        <a href="myPage"><i class="fa-regular fa-user"></i></a>
+      </nav>
+    </header>
+    <div class="container">
+      <div class="header">
+        <h1>공지사항</h1>
+        <p></p>
+        <a href="/notice/write" class="btn btn-outline-warning">게시글 등록</a>
       </div>
-      <div class="form-group">
-        <label>내용</label>
-        <textarea class="form-control" row="10" name="content"></textarea>
-      </div>
-      <div class="form-group">
-        <label for="file">파일 업로드</label>
-        <input
-          class="form-control"
-          type="file"
-          id="file"
-          name="file"
-          accept="image/*"
-        />
-      </div>
-      <button type="submit" class="btn btn-outline-warning">등록</button>
-    </form>
-    <script src="../SemiProject/notice.js"></script>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>번호</th>
+            <th>제목</th>
+            <th>내용</th>
+            <th>작성일</th>
+          </tr>
+        </thead>
+        <tbody>
+          <c:forEach items="${noticeList}" var="notice" varStatus="status">
+            <tr>
+              <td>${status.count + paging.pageSize * (paging.page-1)}</td>
+              <th>
+                <a href="/notice/noticeView?noticeNum=${notice.noticeNum}"
+                  >${notice.title}</a
+                >
+              </th>
+              <td>${notice.content}</td>
+              <td>
+                <fmt:formatDate
+                  value="${notice.writeDate}"
+                  pattern="yyyy-MM-dd"
+                />
+              </td>
+            </tr>
+          </c:forEach>
+        </tbody>
+      </table>
+      <nav>
+        <ul class="pagination">
+          <li class="page-item ${paging.prev ? '' : 'disabled' }">
+            <a
+              class="page-link"
+              href="/notice/list?page=${paging.startPage - 1}"
+              >Previous</a
+            >
+          </li>
+          <c:forEach
+            begin="${paging.startPage}"
+            end="${paging.endPage}"
+            var="page"
+          >
+            <li class="page-item">
+              <a
+                class="page-link ${page == page ? 'active' : ''}"
+                href="/notice/list?page=${page}"
+                >${page}</a
+              >
+            </li>
+          </c:forEach>
+
+          <li class="page-item ${paging.next ? '' : 'disabled'}">
+            <a class="page-link" href="/notice/list?page=${paging.endPage + 1}"
+              >Next</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </div>
   </body>
 </html>

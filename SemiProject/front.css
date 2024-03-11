@@ -12,7 +12,6 @@ section {
 }
 
 header {
-  position: fixed;
   width: 100%;
   height: 70px;
   display: flex;
@@ -39,6 +38,15 @@ header nav:nth-child(2) {
 header nav:nth-child(2) a {
   padding: 20px;
   font-size: 1.5rem;
+}
+
+nav a span {
+  display: block;
+  position: relative;
+  bottom: 600px;
+}
+nav a span a {
+  display: none;
 }
 
 /* -----------------------------------Main Section 1-------------------------------------- */
@@ -77,10 +85,10 @@ header nav:nth-child(2) a {
 }
 @keyframes out1 {
   from {
-    left: 50px;
+    left: -600px;
   }
   to {
-    left: -1000px;
+    left: 50p;
   }
 }
 
@@ -272,6 +280,15 @@ header nav:nth-child(2) a {
   }
 }
 
+@keyframes out5 {
+  from {
+    left: -500px;
+  }
+  to {
+    left: 0px;
+  }
+}
+
 .container-blackbox {
   position: relative;
   left: 1126px;
@@ -318,6 +335,15 @@ header nav:nth-child(2) a {
   }
 }
 
+@keyframes out6 {
+  from {
+    left: -500px;
+  }
+  to {
+    left: 0px;
+  }
+}
+
 .Floor :nth-child(2) {
   position: relative;
   width: 100%;
@@ -329,6 +355,15 @@ header nav:nth-child(2) a {
 }
 
 @keyframes slide7 {
+  from {
+    left: 1500px;
+  }
+  to {
+    left: 300px;
+  }
+}
+
+@keyframes out7 {
   from {
     left: 1500px;
   }
@@ -392,7 +427,7 @@ header nav:nth-child(2) a {
   color: white;
 }
 
-/* --------------------------------------- Footer -------------------------------------- */
+/* -------------------------------------- Footer -------------------------------------- */
 
 .line2 {
   left: 50px;
