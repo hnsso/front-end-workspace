@@ -29,7 +29,7 @@ $(function () {
   $("div > ul > li").css("color", "green");
   $("div > ul > .ch").css("background-color", "lime");
   $("div > ul > li > h3").css("color", "indianred");
-  $("dib > h3").css("color", "violet");
+  $("div > h3").css("color", "violet");
   $("div h3").css("background-color", "khaki");
 
   // 5. 속성 선택자

@@ -69,10 +69,18 @@ header nav:nth-child(2) a {
 
 @keyframes slide1 {
   from {
-    left: -300px;
+    left: -600px;
   }
   to {
     left: 50px;
+  }
+}
+@keyframes out1 {
+  from {
+    left: 50px;
+  }
+  to {
+    left: -1000px;
   }
 }
 
@@ -87,7 +95,16 @@ header nav:nth-child(2) a {
 
 @keyframes slide2 {
   from {
-    left: -200px;
+    left: 50px;
+  }
+  to {
+    left: 400px;
+  }
+}
+
+@keyframes out2 {
+  from {
+    left: 50px;
   }
   to {
     left: 400px;
@@ -204,6 +221,15 @@ header nav:nth-child(2) a {
 }
 
 @keyframes slide4 {
+  from {
+    left: -200px;
+  }
+  to {
+    left: 0px;
+  }
+}
+
+@keyframes out4 {
   from {
     left: -200px;
   }
