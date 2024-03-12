@@ -6,8 +6,8 @@
 .div-test {
   background: yellow;
   border: 10px dashed black;
-  padding: 20px;
-  margin: 20px;
+  padding: 10px;
+  margin: 1px;
 }
 /* border-box : 테투리까지 적용(기본값)*/
 #bc1 {
@@ -39,7 +39,7 @@
 #test {
   border: 1px solid black;
   height: 800px;
-  background-image: url("../../resources/pubao.jpg");
+  background-image: url("../css/resources/pubao.jpg");
 
   background-repeat: repeat;
   background-repeat: repeat-x;

@@ -78,6 +78,7 @@
 /*text-decoration*/
 #td1 {
   text-decoration: underline;
+  /* 자주사용 ! */
 }
 #td2 {
   text-decoration: overline;
@@ -159,6 +160,7 @@
 #ta2 {
   text-align: right;
 }
+/* 가운데 정렬 !!  */
 #ta3 {
   text-align: center;
 }
@@ -171,8 +173,7 @@
 }
 /*line-height*/
 #lh {
-  line-height: 40px;
-  line-height: 1.8;
+  line-height: 60px;
 }
 /*text-overflow*/
 /*-clip(기본값) : 영역을 넘어가는 텍스트를 자른다.

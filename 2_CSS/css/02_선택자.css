@@ -35,7 +35,7 @@ p {
 #test1 > * {
   background: pink;
 }
-#test li {
+#test1 li {
   color: red;
 }
 #test1 > ul > li {

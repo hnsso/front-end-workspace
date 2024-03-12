@@ -12,13 +12,14 @@ section {
 }
 
 header {
+  position: fixed;
   width: 100%;
   height: 70px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.6);
-  z-index: 2;
+  z-index: 100;
 }
 
 header a {
@@ -40,13 +41,26 @@ header nav:nth-child(2) a {
   font-size: 1.5rem;
 }
 
-nav a span {
+nav > a[href="list"]:hover + span,
+nav > span:hover {
   display: block;
-  position: relative;
-  bottom: 600px;
 }
-nav a span a {
+
+nav > span {
   display: none;
+  position: absolute;
+  right: 89px;
+  top: 53px;
+  padding: 11px;
+}
+
+nav > span a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+nav > span a:hover {
+  color: black;
 }
 
 /* -----------------------------------Main Section 1-------------------------------------- */
@@ -160,6 +174,7 @@ nav a span a {
   }
 }
 /* ------------------------------------Main Section 2-------------------------------------- */
+
 #section2 {
   background-color: rgb(229, 227, 219);
   width: 100%;
@@ -260,7 +275,7 @@ nav a span a {
   font-size: 4rem;
   padding-left: 1020px;
   border-bottom: solid;
-  animation: slide5 1.5s;
+  animation: slide5 1s;
 }
 
 .container2 li {
@@ -323,7 +338,7 @@ nav a span a {
   font-size: 11rem;
   top: -550px;
   opacity: 50%;
-  animation: slide6 2s;
+  animation: slide6 1.5s;
 }
 
 @keyframes slide6 {

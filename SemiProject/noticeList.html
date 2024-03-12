@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Insert title here</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../SemiProject/reset.css" />
+    <link rel="stylesheet" href="../SemiProject/noticeList.css" />
+    <script
+      src="https://kit.fontawesome.com/4602e82315.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
-  <link rel="stylesheet" href="../SemiProject/reset.css" />
-  <link rel="stylesheet" href="../SemiProject/noticeList.css" />
-  <script
-    src="https://kit.fontawesome.com/4602e82315.js"
-    crossorigin="anonymous"
-  ></script>
   <body>
     <header>
       <nav>
@@ -19,41 +20,14 @@
         <a href="#">Store</a>
         <a href="#">Guid</a>
         <a href="collectPage">PickUp</a>
-        <a href="listpage">Board</a>
+        <a href="list">Board</a>
+        <span>
+          <a href="#">Board</a>
+          <a href="#">Q & A</a>
+          <a href="#">Notice</a>
+        </span>
         <a href="myPage"><i class="fa-regular fa-user"></i></a>
       </nav>
     </header>
-    <div class="line1"></div>
-    <div class="line2"></div>
-    <div class="container">
-      <div class="header">
-        <h1>List Page</h1>
-      </div>
-      <table class="table">
-        <thead>
-          <tr>
-            <th>#번호</th>
-            <th>제목</th>
-            <th>작성일</th>
-          </tr>
-        </thead>
-        <tbody>
-          <!--  현재 주소에 있는 거 긁어서 같이 넘기고,거기서 계속 넘기면 다시 유지해서 올 수 있음 -->
-          <c:forEach items="${list}" var="board" varStatus="status">
-            <tr>
-              <td>${status.count}</td>
-              <td><a href="/view?no=${board.no}">${board.title}</a></td>
-              <td>
-                <fmt:formatDate value="${board.date}" pattern="yyyy-MM-dd" />
-              </td>
-            </tr>
-          </c:forEach>
-        </tbody>
-        <a href="/write" class="btn btn-outline-warning">게시글 등록</a>
-      </table>
-    </div>
-
-    <footer></footer>
-    <a href="list"></a>
   </body>
 </html>
