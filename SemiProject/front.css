@@ -49,13 +49,13 @@ nav > span:hover {
 nav > span {
   display: none;
   position: absolute;
-  right: 89px;
-  top: 53px;
+  right: 79px;
+  top: 59px;
   padding: 11px;
 }
 
 nav > span a {
-  display: inline-block;
+  display: block;
   text-decoration: none;
 }
 

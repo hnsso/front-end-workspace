@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -6,85 +7,109 @@
     <link rel="stylesheet" href="../SemiProject/reset.css" />
     <link rel="stylesheet" href="../SemiProject/notice.css" />
   </head>
-  <body>
-    <div class="header-blackbox"></div>
-    <header>
-      <nav>
-        <a href="#">Primavera</a>
-      </nav>
-      <nav>
-        <a href="#">Store</a>
-        <a href="#">Guid</a>
-        <a href="collectPage">PickUp</a>
-        <a href="listpage">Board</a>
-        <a href="myPage"><i class="fa-regular fa-user"></i></a>
-      </nav>
-    </header>
-    <div class="container">
-      <div class="header">
-        <h1>공지사항</h1>
-        <p></p>
-        <a href="/notice/write" class="btn btn-outline-warning">게시글 등록</a>
-      </div>
-      <table class="table">
-        <thead>
-          <tr>
-            <th>번호</th>
-            <th>제목</th>
-            <th>내용</th>
-            <th>작성일</th>
-          </tr>
-        </thead>
-        <tbody>
-          <c:forEach items="${noticeList}" var="notice" varStatus="status">
-            <tr>
-              <td>${status.count + paging.pageSize * (paging.page-1)}</td>
-              <th>
-                <a href="/notice/noticeView?noticeNum=${notice.noticeNum}"
-                  >${notice.title}</a
-                >
-              </th>
-              <td>${notice.content}</td>
-              <td>
-                <fmt:formatDate
-                  value="${notice.writeDate}"
-                  pattern="yyyy-MM-dd"
-                />
-              </td>
-            </tr>
-          </c:forEach>
-        </tbody>
-      </table>
-      <nav>
-        <ul class="pagination">
-          <li class="page-item ${paging.prev ? '' : 'disabled' }">
-            <a
-              class="page-link"
-              href="/notice/list?page=${paging.startPage - 1}"
-              >Previous</a
-            >
-          </li>
-          <c:forEach
-            begin="${paging.startPage}"
-            end="${paging.endPage}"
-            var="page"
-          >
-            <li class="page-item">
-              <a
-                class="page-link ${page == page ? 'active' : ''}"
-                href="/notice/list?page=${page}"
-                >${page}</a
-              >
-            </li>
-          </c:forEach>
+  <script
+    src="https://kit.fontawesome.com/4602e82315.js"
+    crossorigin="anonymous"
+  ></script>
+	<div class="header-blackbox"></div>
+	<header>
+		<nav>
+			<a href="#">Primavera</a>
+		</nav>
+		<nav>
+			<a href="#">Store</a> 
+      <a href="#">Guid</a> 
+      <a href="collectPage">PickUp</a>
+			<a href="list">Board</a> 
+      <span> 
+        <a href="#">Board</a> 
+        <a href="#">Q & A</a> 
+        <a href="#">Notice</a>
+    </span> 
+      <a href="myPage"><i class="fa-regular fa-user"></i></a>
+		</nav>
+	</header>
+	<main>
+		<section class="section1">
+			<img src="../SemiProject/resources/pexels-pixabay-158827.jpg" alt="" />
+			<h1 class="h1">Board</h1>
+			<h1 class="h2">> Notice</h1>
+		</section>
+		<section class="section2">
+			<div>
+				<div class="container">
+					<h1>공지사항</h1>
+					<a href="/notice/write" class="btn btn-outline-warning">게시글 등록</a>
+				</div>
+				<table class="table">
+					<thead>
+						<tr>
+							<td >번호</td>
+							<td>제목</td>
+							<td>내용</td>
+							<td>작성일</td>
+						</tr>
+					</thead>
+					<tbody>
+						<c:forEach items="${noticeList}" var="notice" varStatus="status">
+							<tr>
+								<td>${status.count + paging.pageSize * (paging.page-1)}</td>
+								<td><a
+									href="/notice/noticeView?noticeNum=${notice.noticeNum}">${notice.title}</a>
+								</td>
+								<td>${notice.content}</td>
+								<td><fmt:formatDate value="${notice.writeDate}"
+										pattern="yyyy-MM-dd" /></td>
+							</tr>
+						</c:forEach>
+					</tbody>
+				</table>
+				<nav>
+					<ul class="pagination">
+						<li class="page-item ${paging.prev ? '' : 'disabled' }"><a
+							class="page-link"
+							href="/notice/list?page=${paging.startPage - 1}">Previous</a></li>
+						<c:forEach begin="${paging.startPage}" end="${paging.endPage}"
+							var="page">
+							<li class="page-item"><a
+								class="page-link ${page == page ? 'active' : ''}"
+								href="/notice/list?page=${page}">${page}</a></li>
+						</c:forEach>
 
-          <li class="page-item ${paging.next ? '' : 'disabled'}">
-            <a class="page-link" href="/notice/list?page=${paging.endPage + 1}"
-              >Next</a
-            >
-          </li>
-        </ul>
-      </nav>
+						<li class="page-item ${paging.next ? '' : 'disabled'}"><a
+							class="page-link" href="/notice/list?page=${paging.endPage + 1}">Next</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</section>
+	</main>
+  <footer>
+    <div class="row_left">
+      <h3></h3>
+      <a href=""></a>
+      <p><i class="fa-solid fa-location-arrow"></i></p>
     </div>
-  </body>
+    <div class="row_center">
+      <a href="#"><ul>Home</ul></a>
+      <a href="#"><ul>Store</ul></a>
+      <a href="#"><ul>Guid</ul></a>
+      <a href="#"><ul>PickUp</ul></a>
+      <a href="#"><ul>Bord</ul></a>
+    </div>       
+    <div class="row_SNS">
+      <a href="https://www.instagram.com/"><ul>Instagram</ul></a>
+      <a href="#"><ul>FaceBook</ul></a>
+      <a href="#"><ul>YouTube</ul></a>
+      <a href="#"><ul>GitHub</ul></a>
+    </div>
+    <div class="impormation">
+      <a href=""></a>
+      <a href=""></a>
+      <a href=""></a>
+      <a href=""></a>
+    </div>
+
+  </footer>
+</body>
 </html>
