@@ -2,13 +2,14 @@ footer {
   margin: 0;
   padding: 0;
   height: 30vh;
+  background-color: black;
 }
 
 body > p {
   width: 100%;
   height: 60px;
   background-color: blue;
-  color: black;
+  color: white;
   font-size: 3rem;
   font-weight: bold;
   /* font-style: Monospace; */
@@ -39,8 +40,8 @@ footer .left {
 
 .left h4 {
   position: relative;
-  width: 300px;
-  top: 32px;
+  width: 454px;
+  top: 208px;
   left: 30px;
 }
 

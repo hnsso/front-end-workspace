@@ -49,14 +49,14 @@ nav > span:hover {
 nav > span {
   display: none;
   position: absolute;
-  right: 79px;
-  top: 59px;
+  right: 73px;
+  top: 70px;
   padding: 11px;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 nav > span a {
   display: block;
-  text-decoration: none;
 }
 
 nav > span a:hover {
@@ -84,10 +84,6 @@ a h1::after {
 nav a:hover::after,
 a h1:hover::after {
   width: 100%;
-}
-
-.directivity a h1:hover {
-  opacity: 0.5;
 }
 
 /* -----------------------------------Main Section 1-------------------------------------- */
@@ -328,9 +324,9 @@ a h1:hover::after {
 
 .container2 li {
   position: relative;
-  width: 580px;
+  width: 591px;
   font-size: 2rem;
-  left: 1300px;
+  left: 1230px;
   bottom: 480px;
 }
 
@@ -566,4 +562,156 @@ footer {
   font-weight: bold;
   right: 100px;
   top: 90px;
+}
+/* ------------------------------------------------------------------------- */
+footer {
+  margin: 0;
+  padding: 0;
+  height: 30vh;
+}
+
+body > p {
+  width: 100%;
+  height: 60px;
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+  /* font-style: Monospace; */
+}
+
+.title {
+  font-size: 3rem;
+  position: relative;
+  left: 83px;
+  top: 89px;
+}
+
+footer {
+  display: flex;
+  justify-content: space-around;
+}
+
+.left > h5 {
+  top: 151px;
+  font-size: 0.9rem;
+  position: relative;
+  right: 129px;
+}
+
+footer .left {
+  height: 200px;
+  width: 33%;
+}
+
+.left h4 {
+  position: relative;
+  width: 386px;
+  top: 169px;
+  right: 129px;
+  font-size: 1.1rem;
+}
+
+.left > p {
+  position: relative;
+  top: 187px;
+  right: 130px;
+}
+
+.left h1 {
+  position: relative;
+  font-size: 1.2rem;
+  right: 130px;
+  top: 220px;
+}
+
+/* --------------------------------------------------------------------- */
+
+footer .center {
+  height: 200px;
+  width: 43%;
+}
+
+.center ul {
+  right: 70px;
+  position: relative;
+  font-size: 1.1rem;
+  cursor: pointer;
+  top: 180px;
+  color: black;
+}
+
+.center ul li {
+  margin: 10px;
+}
+
+.center li:hover {
+  opacity: 0.5;
+}
+
+.center span {
+  position: relative;
+  font-size: 1.4rem;
+  top: 218px;
+  right: 55px;
+}
+
+.center span a {
+  margin: 25px;
+  color: black;
+}
+
+.center span :hover {
+  opacity: 0.6;
+}
+
+span a {
+  text-decoration: none;
+  position: relative;
+}
+
+span a::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background-color: white;
+  transition: width 0.5s ease;
+}
+
+span a:hover::after {
+  width: 100%;
+}
+
+/* --------------------------------------------------------------------- */
+
+footer .right {
+  position: relative;
+  width: 500px;
+  font-size: 1rem;
+  top: 103px;
+}
+
+footer .right h2 {
+  font-size: 1.2rem;
+}
+
+.right div a {
+  margin: 4px;
+  position: relative;
+  top: 51px;
+  color: black;
+}
+
+.right div a:hover {
+  opacity: 0.7;
+}
+
+footer img {
+  vertical-align: middle;
+  color: black;
+  position: relative;
+  left: 259px;
+  top: 18px;
 }
