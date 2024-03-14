@@ -1,0 +1,122 @@
+footer {
+  margin: 0;
+  padding: 0;
+  height: 30vh;
+}
+
+body > p {
+  width: 100%;
+  height: 60px;
+  background-color: blue;
+  color: black;
+  font-size: 3rem;
+  font-weight: bold;
+  /* font-style: Monospace; */
+}
+
+.title {
+  position: relative;
+  left: 33px;
+}
+
+footer {
+  display: flex;
+  justify-content: space-around;
+}
+
+.left > h5 {
+  font-size: 0.8rem;
+  position: relative;
+  left: 61px;
+  bottom: 2px;
+}
+
+footer .left {
+  background-color: rgb(97, 126, 126);
+  height: 200px;
+  width: 33%;
+}
+
+.left h4 {
+  position: relative;
+  width: 300px;
+  top: 32px;
+  left: 30px;
+}
+
+.left > p {
+  position: relative;
+  top: 60px;
+  left: 27px;
+}
+
+.left h1 {
+  position: relative;
+  font-size: 1.2rem;
+  left: 27px;
+  top: 109px;
+}
+
+/* --------------------------------------------------------------------- */
+footer .center {
+  background-color: yellow;
+  height: 200px;
+  width: 33%;
+}
+
+.center ul {
+  position: relative;
+  font-size: 1.4rem;
+  font-weight: lighter;
+  cursor: pointer;
+  left: 35px;
+  top: 65px;
+  color: black;
+}
+
+li:hover {
+  opacity: 0.5;
+}
+
+.center span {
+  position: relative;
+  font-size: 1.4rem;
+  margin: 60p;
+  top: 154px;
+}
+
+.center span a {
+  margin: 34px;
+}
+
+.center span :hover {
+  opacity: 0.5;
+}
+
+span a {
+  text-decoration: none;
+  position: relative;
+}
+
+span a::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  width: 0%;
+  height: 1px;
+  background-color: white;
+  transition: width 0.5s ease;
+}
+
+span a:hover::after {
+  width: 100%;
+}
+
+/* --------------------------------------------------------------------- */
+
+footer .right {
+  background-color: burlywood;
+  height: 200px;
+  width: 33%;
+}
