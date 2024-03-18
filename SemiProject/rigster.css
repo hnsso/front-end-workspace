@@ -1,0 +1,16 @@
+div #title {
+  border: 2px solid black;
+  padding: 10px;
+  margin: 1px;
+}
+
+#content {
+  border: 2px solid black;
+  padding: 10px;
+  margin: 1px;
+}
+
+a {
+  border: 1px solid;
+  border-radius: 25px;
+}
