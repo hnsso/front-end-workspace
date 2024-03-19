@@ -1,6 +1,14 @@
 * {
   margin: 0%;
   padding: 0%;
+  font-family: "Cafe24Oneprettynight";
+}
+
+@font-face {
+  font-family: "Cafe24Oneprettynight";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Oneprettynight.woff")
+    format("woff");
+  font-style: normal;
 }
 
 a {
@@ -82,8 +90,11 @@ a h1::after {
   background-color: white;
   transition: width 0.5s ease;
 }
+nav span a::after {
+  background-color: white;
+}
 
-nav a i:hover {
+nav span a nav a i:hover {
   color: black;
 }
 
@@ -319,13 +330,13 @@ a h1:hover::after {
   position: absolute;
   width: 550px;
   font-size: 1.5rem;
-  padding-top: 150px;
+  padding-top: 157px;
   padding-left: 20px;
 }
 
 .container2 h1 {
   position: absolute;
-  top: 2400px;
+  top: 2357px;
   font-size: 4rem;
   padding-left: 1020px;
   border-bottom: solid;
@@ -591,21 +602,16 @@ body > p {
 .title {
   font-size: 3rem;
   position: relative;
-  left: 83px;
-  top: 89px;
+  left: 86px;
+  top: 111px;
   height: 73px;
 }
 
-footer {
-  display: flex;
-  justify-content: space-around;
-}
-
 .left > h5 {
-  top: 151px;
+  top: 173px;
   font-size: 0.9rem;
   position: relative;
-  right: 129px;
+  right: 91px;
 }
 
 footer .left {
@@ -616,22 +622,23 @@ footer .left {
 .left h4 {
   position: relative;
   width: 386px;
-  top: 169px;
-  right: 129px;
-  font-size: 1.1rem;
+  top: 181px;
+  right: 93px;
+  font-size: 1.4rem;
 }
 
 .left > p {
   position: relative;
-  top: 187px;
-  right: 130px;
+  top: 201px;
+  right: 95px;
 }
 
 .left h1 {
   position: relative;
   font-size: 1.2rem;
-  right: 130px;
+  right: 97px;
   top: 220px;
+  color: black;
 }
 
 /* --------------------------------------------------------------------- */
@@ -641,21 +648,17 @@ footer .center {
 }
 
 .center ul {
-  width: 218px;
-  right: 70px;
+  width: 230px;
+  right: 56px;
   position: relative;
   font-size: 1.1rem;
-  cursor: pointer;
-  top: 180px;
+  top: 195px;
   color: black;
 }
 
 .center ul li {
   margin: 10px;
-}
-
-.center li:hover {
-  opacity: 0.5;
+  font-size: 1.2rem;
 }
 
 .center span {
@@ -671,7 +674,7 @@ footer .center {
 }
 
 .center span :hover {
-  opacity: 0.6;
+  opacity: 0.85;
 }
 
 span a {
@@ -686,7 +689,7 @@ span a::after {
   left: 0;
   width: 0%;
   height: 3px;
-  background-color: white;
+  background-color: rgba(0, 0, 0, 0.568);
   transition: width 0.5s ease;
 }
 
