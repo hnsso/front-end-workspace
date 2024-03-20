@@ -1,6 +1,4 @@
-<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>;
-
-// [2022.05.11] 마우스 휠 좌,우 이동
+//  마우스 휠 좌,우 이동
 $("#mouse_move").on("mousewheel", function (e) {
   event.stopPropagation();
   event.stopImmediatePropagation();
