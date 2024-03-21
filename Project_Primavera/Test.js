@@ -25,7 +25,7 @@ $(document).ready(function () {
     // 그래서 억지로 전체 box들의 세로크기 만큼 body에 줘야한다.(스크롤 내리기위함)
     // 이때 높이는 가로영역의 비율과 동일하게 준다. (이후 리미트를 주게 됨으로써 비율의 값이 정해진다.)
     $("body").css({
-      height: "100vh",
+      height: "200vh",
     });
 
     let w_width = $(window).width(); // 화면의 가로값
