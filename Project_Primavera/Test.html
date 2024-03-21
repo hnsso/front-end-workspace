@@ -4,23 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../Project_Primavera/reset.css" />
-    <!-- <link rel="stylesheet" href="../Project_Primavera/Test.css" /> -->
+    <link rel="stylesheet" href="../Project_Primavera/Test.css" />
+    <script
+      src="https://kit.fontawesome.com/4602e82315.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <title>Document</title>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <style>
-      #top {
-        background-color: aqua;
-        height: 100vh;
-      }
-      .box {
-        height: 100vh;
-        font-size: 100px;
-        line-height: 100vh;
-        text-align: center;
-        border: 10px solid;
-        box-sizing: border-box;
-      }
-    </style>
   </head>
   <body>
     <div class="header-blackbox"></div>
@@ -38,18 +29,47 @@
         <a href="myPage"><i class="fa-regular fa-user" id="mypage"></i></a>
       </nav>
     </header>
-    <section id="top">
-      <div class="blackbox"></div>
-      <div class="top-content">
-        <h2>Guide</h2>
-      </div>
+
+    <section class="section1">
+      <img src="../Project_Primavera/guide_back (2).jpg" alt="" />
+      <h1 class="h2">Guide</h1>
     </section>
+
     <main>
       <div class="container">
-        <div class="box">box0</div>
-        <div class="box">box1</div>
-        <div class="box">box2</div>
-        <div class="box">box3</div>
+        <div class="box" id="box1">
+          <div class="Request">
+            <h1>[1] 수거 신청하기=========</h1>
+            <p>
+              1) 웹 사이트를 통해 간편하게 의류 수거 신청을 할 수 있습니다.
+              사이트 내 [상단바 > PickUp] 또는 [메인 첫 페이지 > "Pick Up > "]을
+              통해 신청이 가능합니다! <br></br>
+              2) 수거 신청 주소가 회원 정보와 다른 경우
+              신청 폼에서 변경 가능합니다.<br></br> 
+              3) "수거일"에 수거를 원하는 일정을
+              선택해 주세요. <br></br>
+              4) 다음으로 "수거 신청 무게" 항목에 수거 신청할
+              의류의 무게를 선택해 주세요. * 프리마베라의 수거 서비스는 5kg
+              이상부터 20kg 이하인 경우에만 이용 가능합니다! <br></br>
+              5) "수거 신청 하기"
+              버튼을 누르면 신청이 완료됩니다.
+            </p>
+          </div>
+          <div class="Clothing">
+            <h1>[2] 의류 픽업(비대면 수거)</h1>
+            <p>
+                 1) 수거 신청한 날짜에 문 앞에 수거품을 내어주시면 프리마베라 픽업 팀이 직접 비대면 수거합니다.<br></br>
+                당일 예약된 주소지들을 기반으로 이동하므로 픽업 시간은 상황에 따라 다릅니다.<br></br>
+                 약속된 수거일 오전 8시 이전까지 수거품을 문앞에 놓아주시길 부탁드립니다!<br></br>
+                 <br></br>
+                 2) 수거품 픽업 시 신청 폼에 입력하신 번호로 수거 확인 메세지를 발송합니다.<br></br>
+                (수거 완료)
+            </p>
+          </div>
+        </div>
+        <div class="box" id="box2">box1</div>
+        <div class="box" id="box3">box2</div>
+        <div class="box" id="box4">box3</div>
       </div>
     </main>
   </body>

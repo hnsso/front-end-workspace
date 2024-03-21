@@ -8,16 +8,14 @@ $(document).ready(function () {
 
     $(".container").css({
       width: con_width,
-      height: "200vh",
+      height: "100vh",
       position: "relative",
       top: 0,
       left: 0,
     });
 
-    // css에서 해도 상관없다.
     $(".box").css({
       width: con_width / $(".box").length,
-      height: "200vh",
       float: "left",
     });
 
@@ -25,7 +23,7 @@ $(document).ready(function () {
     // 그래서 억지로 전체 box들의 세로크기 만큼 body에 줘야한다.(스크롤 내리기위함)
     // 이때 높이는 가로영역의 비율과 동일하게 준다. (이후 리미트를 주게 됨으로써 비율의 값이 정해진다.)
     $("body").css({
-      height: "200vh",
+      height: "185vh",
     });
 
     let w_width = $(window).width(); // 화면의 가로값
