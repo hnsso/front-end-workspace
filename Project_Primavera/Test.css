@@ -10,10 +10,6 @@
   font-style: normal;
 }
 
-section {
-  height: 85vh;
-}
-
 header {
   position: fixed;
   width: 100%;
@@ -71,14 +67,12 @@ nav > span a:hover {
   color: white;
 }
 
-nav a,
-a h1 {
+nav a {
   text-decoration: none;
   position: relative;
 }
 
-a::after,
-a h1::after {
+a::after {
   content: "";
   position: absolute;
   bottom: 0px;
@@ -95,6 +89,10 @@ a h1:hover::after {
 }
 
 /* -----------------------------------Main Section 1-------------------------------------- */
+section {
+  height: 85vh;
+}
+
 .header-blackbox {
   position: absolute;
   width: 100%;
@@ -129,22 +127,4 @@ img {
   to {
     left: 35px;
   }
-}
-
-.box {
-  height: 100vh;
-  text-align: center;
-  box-sizing: border-box;
-}
-
-.Request {
-  width: 500px;
-}
-
-.Clothing {
-  width: 500px;
-}
-
-.box {
-  display: flex;
 }
