@@ -446,7 +446,6 @@ img {
   border-radius: 3px;
   background-position: center center;
   background-size: cover;
-  background-image: url("https://ivang-design.com/ig-logo.jpg");
   box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.3);
   transition: opacity 0.2s, border-radius 0.2s, box-shadow 0.2s;
   transition-timing-function: ease-out;
@@ -505,23 +504,22 @@ img {
 
 #text1 p {
   position: relative;
-  top: 1px;
-  bottom: 18px;
+  top: 41px;
   padding-left: 345px;
   font-size: 1.2rem;
-  left: 50%;
+  left: 48%;
 }
 
 #text1 img {
   width: 588px;
   height: 394px;
   left: 12%;
-  top: 25%;
+  top: 37%;
 }
 
 #text2 p {
   position: relative;
-  top: 1px;
+  top: 22px;
   padding-top: 198px;
   padding-left: 318px;
   left: 50%;
@@ -531,12 +529,12 @@ img {
   width: 588px;
   height: 394px;
   left: 12%;
-  top: 32%;
+  top: 47%;
 }
 
 #text3 p {
   position: relative;
-  top: 1px;
+  top: 50px;
   padding-top: 172px;
   padding-left: 295px;
   left: 50%;
@@ -546,7 +544,7 @@ img {
   width: 588px;
   height: 394px;
   left: 12%;
-  top: 26%;
+  top: 38%;
   opacity: 0.8;
 }
 
@@ -562,7 +560,7 @@ img {
   width: 588px;
   height: 394px;
   left: 12%;
-  top: 152px;
+  top: 224px;
 }
 
 #text4 a {
