@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const options = {
     root: null,
     rootMargin: "0px",
-    threshold: 0.4,
+    threshold: 0.8,
   };
 
   // IMAGE ANIMATION
