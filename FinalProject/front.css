@@ -1,0 +1,43 @@
+header {
+  position: fixed;
+}
+
+section {
+  height: 100vh;
+}
+
+/* ------------------------------------------- */
+
+.bg-body-tertiary {
+  height: 80px;
+  z-index: 55555;
+}
+
+.navbar-brand {
+  position: relative;
+  left: 30px;
+}
+
+#mypage {
+  position: relative;
+  left: 834px;
+  top: 1px;
+}
+
+.container-fluid a i {
+  color: black;
+  font-size: 1.5rem;
+  position: relative;
+  left: 250px;
+}
+
+/* ------------------------------------------- */
+
+.sec1 img {
+  z-index: -5;
+  width: 450px;
+  height: 900px;
+  position: relative;
+  left: 557px;
+  top: 200px;
+}
