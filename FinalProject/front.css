@@ -1,8 +1,18 @@
+html {
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+  font-family: system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
 header {
   position: fixed;
+  z-index: 2;
 }
 
 section {
+  z-index: 1;
   height: 100vh;
 }
 
@@ -25,13 +35,49 @@ section {
 }
 
 .container-fluid a i {
-  color: black;
   font-size: 1.5rem;
   position: relative;
   left: 250px;
 }
 
-/* ------------------------------------------- */
+div #offcanvasNavbar {
+  background: rgb(52, 54, 54);
+}
+
+.offcanvas-header,
+.offcanvas-body,
+.dropdown-meny li a {
+  color: white;
+  font-size: 2.5rem;
+}
+
+/* ---------------------메뉴 클릭시   --------------------- */
+
+/* ======================== 메뉴 ================================ */
+.offcanvas-title {
+  margin-bottom: 0;
+  line-height: var(--bs-offcanvas-title-line-height);
+  font-size: 4rem;
+  position: relative;
+  left: 13px;
+}
+
+/* ============   메뉴 하단 회사로고 !! ================= */
+.offcanvas-header h2 {
+  font-size: 3rem;
+  position: relative;
+  right: 150px;
+  top: 840px;
+}
+
+/* ========================= 닫기 ============================== */
+.offcanvas-header .btn-close {
+  font-size: 2rem;
+}
+
+.btn-close:hover {
+  color: white;
+}
 
 .sec1 img {
   z-index: -5;

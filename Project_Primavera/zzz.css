@@ -39,7 +39,7 @@ img {
   max-width: 75vw;
   object-fit: contain;
 }
-
+/* ================================================ */
 h2 {
   font-family: Termina, sans-serif;
   font-weight: 800;
@@ -57,7 +57,20 @@ h2 {
   display: grid;
   place-items: center;
 }
+/* =================== h2 관련 이벤트 !! ===================== */
+body:not(.no-js) .fadeup {
+  opacity: 0;
+  transition: 0.4s ease-out;
+  transform: translateY(40px);
+}
 
+body:not(.no-js) .fading-up {
+  opacity: 1;
+  transition: 1s ease-out;
+  transform: translateY(0px);
+  transition-delay: 0.7s;
+}
+/* =========================================================== */
 body:not(.no-js) .image-wrap {
   transition: 1s ease-out;
   transition-delay: 0.2s;
@@ -83,17 +96,4 @@ body:not(.no-js) .animating .image-wrap {
 body:not(.no-js) .animating img {
   transform: scale(1);
   transition: 4s ease-out;
-}
-
-body:not(.no-js) .fadeup {
-  opacity: 0;
-  transition: 0.4s ease-out;
-  transform: translateY(40px);
-}
-
-body:not(.no-js) .fading-up {
-  opacity: 1;
-  transition: 1s ease-out;
-  transform: translateY(0px);
-  transition-delay: 0.7s;
 }
