@@ -1,23 +1,7 @@
-let didScroll = false;
-let paralaxTitles = document.querySelectorAll(".paralax-title");
-
-const scrollInProgress = () => {
-  didScroll = true;
-};
-
-const raf = () => {
-  if (didScroll) {
-    paralaxTitles.forEach((element, index) => {
-      element.style.transform = "translateX(" + window.scrollY / 10 + "%)";
-    });
-    didScroll = false;
-  }
-  requestAnimationFrame(raf);
-};
-
-requestAnimationFrame(raf);
-window.addEventListener("scroll", scrollInProgress);
-// ======================================================
+/* 
+demo of the code found at: http://visualidiot.com/articles/css3 
+browser support: IE10+, Firefox 5+, Chrome, Safari 4+
+*/
 
 $(document).ready(function () {
   // 클래스가 "scroll_on"인 모든 요소를 선택합니다.
@@ -54,5 +38,3 @@ $(document).ready(function () {
     })
     .scroll();
 });
-
-// ===================

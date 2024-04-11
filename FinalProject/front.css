@@ -15,7 +15,7 @@
 section {
   z-index: 1;
   height: 100vh;
-  background-color: rgb(223, 231, 238);
+  background-color: rgb(242, 242, 247);
 }
 
 .bg-body-tertiary {
@@ -25,7 +25,7 @@ section {
 
 /*   */
 .sec1 {
-  background-color: rgb(223, 231, 238);
+  background-color: rgb(242, 242, 247);
   position: relative;
   bottom: 112px;
   height: 104vh;
@@ -208,3 +208,4 @@ body {
     left: -100%;
   }
 }
+/* ======================= */

@@ -1,0 +1,61 @@
+/* ======================  가로로 이동하는 바 애니메이션 ============================ */
+
+.marquee {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.marquee div {
+  font-size: 4rem;
+  display: block;
+  width: 2000vh;
+  height: 80px;
+  position: absolute;
+  overflow: hidden;
+  animation: marquee 8s linear infinite;
+}
+
+.marquee span {
+  float: left;
+  width: 100%;
+}
+
+@keyframes marquee {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -100%;
+  }
+}
+
+/* =======================폰트 에니매이션 아래 위 밑 ======================= */
+
+.scroll_wrap {
+  overflow: hidden;
+}
+.scroll_on {
+  padding: 50px 0;
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+  opacity: 0;
+  transition: all 1s;
+}
+.scroll_on.active {
+  opacity: 1 !important;
+  transform: translate(0, 0) !important;
+}
+.scroll_on.type_top {
+  transform: translate(0, -50px);
+}
+.scroll_on.type_bottom {
+  transform: translate(0, 50px);
+}
+.scroll_on.type_left {
+  transform: translate(-50px, 0);
+}
+.scroll_on.type_right {
+  transform: translate(50px, 0);
+}

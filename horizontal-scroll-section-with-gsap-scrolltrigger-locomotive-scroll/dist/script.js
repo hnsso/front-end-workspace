@@ -5,7 +5,7 @@ const pageContainer = document.querySelector(".container");
 /* SMOOTH SCROLL */
 const scroller = new LocomotiveScroll({
   el: pageContainer,
-  smooth: true,
+  smooth: true
 });
 
 scroller.on("scroll", ScrollTrigger.update);
@@ -21,10 +21,10 @@ ScrollTrigger.scrollerProxy(pageContainer, {
       left: 0,
       top: 0,
       width: window.innerWidth,
-      height: window.innerHeight,
+      height: window.innerHeight
     };
   },
-  pinType: pageContainer.style.transform ? "transform" : "fixed",
+  pinType: pageContainer.style.transform ? "transform" : "fixed"
 });
 
 ////////////////////////////////////
@@ -45,10 +45,10 @@ window.addEventListener("load", function () {
       pin: true,
       // anticipatePin: 1,
       start: "top top",
-      end: pinWrapWidth,
+      end: pinWrapWidth
     },
     x: -horizontalScrollLength,
-    ease: "none",
+    ease: "none"
   });
 
   ScrollTrigger.addEventListener("refresh", () => scroller.update()); //locomotive-scroll
