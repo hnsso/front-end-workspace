@@ -1,0 +1,54 @@
+/* !! 변수 !! */
+$main-color: pink; // sass에서는 변수 지정이 가능 !!
+$primary-size: 8rem;
+
+/* 믹스인 */
+@mixin text-center {
+  text-align: center;
+}
+
+/* 상속 */
+.border {
+  border: 10px solid gold;
+}
+
+div {
+  @include text-center; // 중앙 정렬
+
+  background-color: black;
+  color: white;
+  font-size: $primary-size;
+
+  /* 1 ) SCSS의 중첩시작 !!  */
+  h1 {
+    &:hover {
+      /*h1바로 그태그를 선택하는거는 SCSS에서는 & 를 표기하고 한다 !*/
+      background-color: $main-color;
+    }
+    color: yellow;
+  }
+}
+
+/* div h1 { 우리가 원래 h1태그에 접근해서 쓸려면 이렇게 했으나 1)
+  color: yellow;
+} */
+
+/* ============================================ */
+
+/* 클래스 선택이 우선 순위가 더 높다 */
+.class {
+  @extend .border;
+
+  background-color: green;
+  font-size: $primary-size;
+
+  @media screen and (max-width: 800px) {
+    background-color: $main-color;
+  }
+}
+
+#id {
+  background-color: navy;
+}
+
+/* 우리가 바벨 이랑 scss를 전처리해야 사용가능하다 !!  */
