@@ -1,0 +1,184 @@
+@charset "utf-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  position: fixed;
+  width: 200vh;
+  height: 107px;
+  z-index: 8000;
+  color: white;
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header a {
+  z-index: 5000000000000;
+  font-size: 20px;
+  color: rgb(32, 57, 38);
+  text-decoration: none;
+  display: flex;
+  justify-content: last baseline;
+  margin: 86px;
+}
+
+header a:nth-child(1) {
+  font-size: 2rem;
+}
+
+/* ============================== 메뉴바 ================================== */
+
+.menu-trigger,
+.menu-trigger span {
+  display: inline-block;
+  transition: all 0.4s;
+  box-sizing: border-box;
+}
+
+.menu-trigger {
+  position: relative;
+  width: 50px;
+  height: 44px;
+}
+
+.menu-trigger span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: rgb(32, 57, 38);
+  border-radius: 4px;
+}
+
+.menu-trigger span:nth-of-type(1) {
+  top: 0;
+}
+
+.menu-trigger span:nth-of-type(2) {
+  top: 20px;
+}
+
+.menu-trigger span:nth-of-type(3) {
+  bottom: 0;
+}
+
+/* type-05 */
+/* 중앙 라인이 밖으로 빠지면서 상하라인 엑스자 만들기 */
+.menu-trigger.active-1 span:nth-of-type(1) {
+  -webkit-transform: translateY(20px) rotate(-45deg);
+  transform: translateY(20px) rotate(-45deg);
+}
+.menu-trigger.active-1 span:nth-of-type(2) {
+  left: 50%;
+  opacity: 0;
+  -webkit-animation: active-menu-bar05 0.8s forwards;
+  animation: active-menu-bar05 0.8s forwards;
+}
+@-webkit-keyframes active-menu-bar05 {
+  100% {
+    height: 0;
+  }
+}
+@keyframes active-menu-bar05 {
+  100% {
+    height: 0;
+  }
+}
+.menu-trigger.active-1 span:nth-of-type(3) {
+  -webkit-transform: translateY(-20px) rotate(45deg);
+  transform: translateY(-20px) rotate(45deg);
+}
+
+/* ==================================================== */
+
+#section1 {
+  height: 100vh;
+  background: rgb(222, 217, 207);
+  position: relative;
+  z-index: 6000;
+}
+
+#section1 p {
+  color: rgb(32, 57, 38);
+  font-size: 17rem;
+  position: relative;
+  top: 588px;
+}
+
+#section1 h1 {
+  color: rgb(32, 57, 38);
+  font-size: 4rem;
+  position: relative;
+  font-weight: lighter;
+  bottom: 19px;
+  left: 81px;
+}
+
+/* =================================================== */
+#section2 {
+  height: 100vh;
+  background: white;
+  position: relative;
+  z-index: 7000;
+}
+#section3 {
+  height: 5000px;
+  background: red;
+  position: relative;
+  z-index: 4000;
+}
+#section4 {
+  height: 150vh;
+  background: blue;
+  position: relative;
+  z-index: 5000;
+}
+#section5 {
+  height: 100vh;
+  background: yellowgreen;
+  position: relative;
+  z-index: 6000;
+}
+#section6 {
+  height: 100vh;
+  background: yellow;
+  position: relative;
+  z-index: 7000;
+}
+
+.sec3 {
+  position: fixed;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  width: 4000px;
+  background: rgb(255, 0, 157);
+  color: white;
+}
+
+.sec3 > div {
+  width: 1000px;
+  height: 100vh;
+  float: left;
+}
+
+.sec3 > div {
+  background: black;
+}
+
+/* .sec3 > div:nth-child(1) {
+  background: rgb(63, 83, 214);
+}
+.sec3 > div:nth-child(2) {
+  background: rgb(94, 125, 102);
+}
+.sec3 > div:nth-child(3) {
+  background: rgb(134, 63, 63);
+}
+.sec3 > div:nth-child(4) {
+  background: rgb(234, 114, 114);
+} */

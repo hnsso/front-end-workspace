@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Compagno</title>
+    <link rel="stylesheet" href="../Compagno/Compagno.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <a href="">Compagno</a>
+      <a href="">동물 등록</a>
+      <a href="">펫 시터</a>
+      <a href="">게시판</a>
+      <a href="">로그인</a>
+      <a class="menu-trigger" href="#">
+        <span></span>
+        <span></span>
+        <span></span>
+      </a>
+    </header>
+    <section id="section1">
+      <p>Compagno .</p>
+      <h1>우린 동물를 지키고 사랑합니다</h1>
+      <a href=""></a>
+    </section>
+    <section id="section2"></section>
+    <section id="section3">
+      <div class="sec3">
+        <div>
+          1
+          <p></p>
+          <img src="" alt="" />
+        </div>
+        <div>
+          2
+          <p></p>
+          <img src="" alt="" />
+        </div>
+        <div>3</div>
+        <div>4</div>
+      </div>
+    </section>
+    <section id="section4"></section>
+    <section id="section5"></section>
+    <footer>
+      <section id="section6"></section>
+    </footer>
+
+    <script>
+      $(window).scroll(function () {
+        let scroll = $(window).scrollTop();
+        $(".scroll").text(scroll);
+
+        let offset = scroll - $("#section3").offset().top;
+
+        if (scroll > $("#section3").offset().top) {
+          $(".sec3").css({ left: -offset + "px" });
+        }
+      });
+    </script>
+    <script src="../Compagno/Compagno.js"></script>
+  </body>
+</html>
