@@ -40,7 +40,7 @@ export const useGetQuery = () => {
 
 // 자바스크립트를 이용하여 백핸드서버에 있는 데이터만 가져와서 웹페이지 일부를 동적으로 바꾸는
 // axios (async ~ await) => 비동기처리할때 무조건 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! 이거
-export const getAxios = async () => {
-  const response = await axios.get("http://localhost:8080/api/animal");
-  return response.data;
-};
+// export const getAxios = async () => {
+//   const response = await axios.get("http://localhost:8080/api/animal");
+//   return response.data;
+// };
