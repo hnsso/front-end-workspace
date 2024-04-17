@@ -8,3 +8,5 @@ burger.each(function (index) {
     $(this).toggleClass("active-" + (index + 1));
   });
 });
+
+// =========================================================== section2

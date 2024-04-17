@@ -1,20 +1,33 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Compagno</title>
+    <link rel="stylesheet" href="../Compagno/reset.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="../Compagno/Compagno.css" />
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   </head>
   <body>
     <header>
-      <a href="">Compagno</a>
-      <a href="">동물 등록</a>
-      <a href="">펫 시터</a>
-      <a href="">게시판</a>
-      <a href="">로그인</a>
+      <nav>
+        <a href="">Compagno</a>
+        <a href="">동물 등록</a>
+        <a href="">펫 시터</a>
+        <a href="">게시판</a>
+        <a href="">로그인</a>
+      </nav>
       <a class="menu-trigger" href="#">
         <span></span>
         <span></span>
@@ -26,24 +39,80 @@
       <h1>우린 동물를 지키고 사랑합니다</h1>
       <a href=""></a>
     </section>
-    <section id="section2"></section>
-    <section id="section3">
-      <div class="sec3">
-        <div>
-          1
-          <p></p>
-          <img src="" alt="" />
+    <section id="section2">
+      <div class="scroll_wrap">
+        <div class="scroll_on type_bottom">
+          <p>안 녕 하 세 요 꼼 빠 뇨 에 이 전 시 입 니 다</p>
         </div>
-        <div>
-          2
-          <p></p>
-          <img src="" alt="" />
+        <div class="scroll_on type_bottom">
+          <h1>
+            저희는 반려동물과 함께하는 즐거움, 특별함의 서비스를 제공하고
+            이웃과의 다양한 모임을 통해 소중한 인연과 추억을 지속적인 유지를
+            이어가고 있습니다
+          </h1>
         </div>
-        <div>3</div>
-        <div>4</div>
+        <div class="scroll_on type_bottom">
+          <h4>
+            다양한 시스템과 커뮤니티를 통해 우리는 보다 최선의 방법을 통해
+            최선을 다하고 있습니다 .
+          </h4>
+        </div>
       </div>
     </section>
-    <section id="section4"></section>
+    <section id="section3">
+      <div class="sec3">
+        <div class="son1">
+          <h2>01</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
+            animi eveniet excepturi tenetur. Autem culpa, similique ipsum
+            voluptates excepturi, dignissimos odio consectetur sequi totam
+            itaque, molestiae quae? Consequuntur, assumenda unde?
+          </p>
+          <img src="../Compagno/resource/section 3 이미지.jpg" alt="" />
+        </div>
+        <div class="son1">
+          <h2>02</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius
+            voluptatum velit tempore fugiat perferendis! Voluptatem perspiciatis
+            cum laborum, doloribus similique quasi atque odit quos laudantium
+            unde obcaecati aliquam. Architecto, aspernatur.
+          </p>
+          <img src="../Compagno/resource/section 3 이미지.jpg" alt="" />
+        </div>
+        <div class="son1">
+          <h2>03</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
+            velit cumque distinctio atque eos fugiat placeat, et voluptates
+            aliquam eum totam, minima nisi magni hic fuga quo nihil accusamus.
+            Voluptas.
+          </p>
+          <img src="../Compagno/resource/section 3 이미지.jpg" alt="" />
+        </div>
+        <div class="son1">
+          <h2>04</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
+            velit cumque distinctio atque eos fugiat placeat, et voluptates
+            aliquam eum totam, minima nisi magni hic fuga quo nihil accusamus.
+            Voluptas.
+          </p>
+          <img src="../Compagno/resource/section 3 이미지.jpg" alt="" />
+        </div>
+      </div>
+    </section>
+    <section id="section4">
+      <div class="container text-center">
+        <div class="row row-cols-2">
+          <div class="col"></div>
+          <div class="col">Column</div>
+          <div class="col">Column</div>
+          <div class="col">Column</div>
+        </div>
+      </div>
+    </section>
     <section id="section5"></section>
     <footer>
       <section id="section6"></section>
@@ -59,6 +128,46 @@
         if (scroll > $("#section3").offset().top) {
           $(".sec3").css({ left: -offset + "px" });
         }
+      });
+
+      $(document).ready(function () {
+        // scroll_on 모든거 한꺼번에
+        const $counters = $(".scroll_on");
+
+        // 노출 비율(%)과 애니메이션 반복 여부(true/false)를 설정합니다.
+        const exposurePercentage = 100; // ex) 스크롤 했을 때 $counters 컨텐츠가 화면에 100% 노출되면 숫자가 올라갑니다.
+        const loop = true; // 애니메이션 반복 여부를 설정합니다. (true로 설정할 경우, 요소가 화면에서 사라질 때 다시 숨겨집니다.)
+
+        // 윈도우의 스크롤 이벤트를 모니터링합니다.
+        $(window)
+          .on("scroll", function () {
+            // 각 "scroll_on" 클래스를 가진 요소에 대해 반복합니다.
+            $counters.each(function () {
+              const $el = $(this);
+
+              // 요소의 위치 정보를 가져옵니다.
+              const rect = $el[0].getBoundingClientRect();
+              const winHeight = window.innerHeight; // 현재 브라우저 창의 높이
+              const contentHeight = rect.bottom - rect.top; // 요소의 높이
+
+              // 요소가 화면에 특정 비율만큼 노출될 때 처리합니다.
+              if (
+                rect.top <=
+                  winHeight - (contentHeight * exposurePercentage) / 100 &&
+                rect.bottom >= (contentHeight * exposurePercentage) / 100
+              ) {
+                $el.addClass("active");
+              }
+              // 요소가 화면에서 완전히 사라졌을 때 처리합니다.
+              if (
+                loop &&
+                (rect.bottom <= 0 || rect.top >= window.innerHeight)
+              ) {
+                $el.removeClass("active");
+              }
+            });
+          })
+          .scroll();
       });
     </script>
     <script src="../Compagno/Compagno.js"></script>

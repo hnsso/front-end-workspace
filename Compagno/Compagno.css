@@ -17,17 +17,29 @@ header {
 }
 
 header a {
-  z-index: 5000000000000;
   font-size: 20px;
   color: rgb(32, 57, 38);
   text-decoration: none;
-  display: flex;
-  justify-content: last baseline;
   margin: 86px;
 }
 
 header a:nth-child(1) {
   font-size: 2rem;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  /* left: 0px; */
+  width: 0%;
+  height: 2px;
+  background-color: rgb(32, 57, 38);
+  transition: width 0.5s ease;
+}
+
+nav a:hover::after {
+  width: 10%;
 }
 
 /* ============================== 메뉴바 ================================== */
@@ -106,7 +118,7 @@ header a:nth-child(1) {
   color: rgb(32, 57, 38);
   font-size: 17rem;
   position: relative;
-  top: 588px;
+  top: 566px;
 }
 
 #section1 h1 {
@@ -118,22 +130,133 @@ header a:nth-child(1) {
   left: 81px;
 }
 
-/* =================================================== */
+/* ================== 설명과 시작 ===================== */
 #section2 {
-  height: 100vh;
-  background: white;
+  background-color: rgb(200, 191, 177);
+  /* height: 60vh; */
   position: relative;
   z-index: 7000;
 }
-#section3 {
-  height: 5000px;
-  background: red;
+
+#section2 p {
+  color: rgb(32, 57, 38);
+  font-size: 0.8rem;
   position: relative;
-  z-index: 4000;
+  left: 87px;
+  top: 41px;
 }
+
+#section2 h1 {
+  color: rgb(32, 57, 38);
+  font-size: 2.25rem;
+  font-weight: normal;
+  text-align: center;
+  width: 48%;
+  position: relative;
+  left: 25%;
+}
+
+#section2 h4 {
+  color: rgb(32, 57, 38);
+  font-size: 1.25rem;
+  font-weight: lighter;
+  text-align: center;
+  width: 50%;
+  position: relative;
+  left: 25%;
+}
+/* =================================================== */
+
+.scroll_wrap {
+  overflow: hidden;
+}
+.scroll_on {
+  padding: 50px 0;
+  opacity: 0;
+  transition: all 1.5s;
+}
+.scroll_on.active {
+  opacity: 1 !important;
+  transform: translate(0, 0) !important;
+}
+
+.scroll_on.type_bottom {
+  transform: translate(0, 50px);
+}
+
+/* ==================================================== */
+
+#section3 {
+  height: 500vh;
+  background: black;
+  position: relative;
+  /* z-index: 4000; */
+}
+
+img {
+  object-fit: cover;
+  width: 751px;
+  position: relative;
+  left: 100px;
+  height: 648px;
+}
+
+/* 여기서 부터 section3 사진과 폰트 관련! */
+.son1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px;
+  padding: 50px;
+  width: 100vh;
+}
+
+.son1 h2 {
+  border-top: 1px solid;
+  position: relative;
+  bottom: 250px;
+  width: 250px;
+}
+
+.son1 p {
+  font-size: 2rem;
+  width: 100vh;
+  position: relative;
+  right: 60px;
+}
+
+.sec3 {
+  position: fixed;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  width: 4522px;
+  /* background: rgb(255, 0, 157); */
+  color: white;
+}
+
+.sec3 > div {
+  background-color: black;
+  opacity: 0.6;
+  width: 1305px;
+  position: relative;
+  right: 1428px;
+  height: 100vh;
+  float: left;
+}
+
+.sec3 {
+  width: 452%;
+  /* height: 100vh; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===================================================== */
 #section4 {
-  height: 150vh;
-  background: blue;
+  height: 100vh;
+  background: rgb(219, 219, 219);
   position: relative;
   z-index: 5000;
 }
@@ -148,26 +271,6 @@ header a:nth-child(1) {
   background: yellow;
   position: relative;
   z-index: 7000;
-}
-
-.sec3 {
-  position: fixed;
-  left: 0;
-  top: 0;
-  overflow: hidden;
-  width: 4000px;
-  background: rgb(255, 0, 157);
-  color: white;
-}
-
-.sec3 > div {
-  width: 1000px;
-  height: 100vh;
-  float: left;
-}
-
-.sec3 > div {
-  background: black;
 }
 
 /* .sec3 > div:nth-child(1) {
