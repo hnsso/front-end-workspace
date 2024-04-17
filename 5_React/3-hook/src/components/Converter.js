@@ -1,5 +1,5 @@
 import Btn from "./Btn";
-import { useState, useEffect } from "react";
+import { useState, useEffect } from "react"; // redux를 쓰지않는다면 !!
 
 const Converter = () => {
   const [number, setNumber] = useState("");

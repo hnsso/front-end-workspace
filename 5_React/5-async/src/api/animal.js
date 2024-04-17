@@ -10,7 +10,7 @@ export const getFetch = () => {
   });
 };
 
-// async ~ await
+// async ~ await : 자바스크립트를 이용하여 백핸드서버에 있는 데이터만 가져와서 웹페이지 일부를 동적으로 바꾸는
 export const getAwait = async () => {
   const response = await fetch("http://localhost:8080/api/animal");
   console.log(response);
@@ -22,7 +22,7 @@ export const getAxios = async () => {
   const response = await axios.get("http://localhost:8080/api/animal");
   return response.data;
 };
-// 
+//
 
 // react-query
 export const useGetQuery = () => {
@@ -31,3 +31,16 @@ export const useGetQuery = () => {
     queryFn: getAxios,
   });
 };
+
+// 비동기 처리 : 동시다발적으로 일을 진행하고 처리한다
+
+// 동기처리 : 순차적으로 일을 처리해나간다
+
+// 그래서 우리는 비동기처리방식으로 데이터를 동시다발적으로 처리해나가야한다 그래서 axios / async and await
+
+// 자바스크립트를 이용하여 백핸드서버에 있는 데이터만 가져와서 웹페이지 일부를 동적으로 바꾸는
+// axios (async ~ await) => 비동기처리할때 무조건 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! 이거
+// export const getAxios = async () => {
+//   const response = await axios.get("http://localhost:8080/api/animal");
+//   return response.data;
+// };

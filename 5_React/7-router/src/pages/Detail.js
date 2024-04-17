@@ -1,5 +1,5 @@
 import { useParams, useNavigate } from "react-router-dom";
-import { getAnimal, updateAnimal } from "../api/animal";
+import { getAnimal, updateAnimal } from "../api/animal"; // 우리가 animal.js에서 정보를 쓰기위해서 두개를 가져와야한다
 import { useEffect, useState } from "react";
 import styled from "styled-components";
 
@@ -23,9 +23,9 @@ const Div = styled.div`
 `;
 
 const Detail = () => {
-  const { no } = useParams();
-  const navigate = useNavigate();
-  const [animal, setAnimal] = useState({ name: "", age: 0 });
+  const { no } = useParams;
+  const navigate = useNavigate(); // 수정후 이동하기위해
+  const [animal, setAnimal] = useState({ name: "", age: 0 }); // 여러개 값은 [] 하나값을 가져오는데있어서는 {} 중괄호
 
   const animalAPI = async () => {
     const response = await getAnimal(no);
