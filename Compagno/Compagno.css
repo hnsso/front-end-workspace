@@ -1,3 +1,5 @@
+/*  rgb(222, 217, 207) 백그라운드    color: rgb(32, 57, 38);*/
+/* background: rgb(219, 219, 219); color : rgb(33,55,70) */
 @charset "utf-8";
 * {
   margin: 0;
@@ -109,13 +111,13 @@ nav a:hover::after {
 
 #section1 {
   height: 100vh;
-  background: rgb(222, 217, 207);
+  background: rgb(219, 219, 219);
   position: relative;
   z-index: 6000;
 }
 
 #section1 p {
-  color: rgb(32, 57, 38);
+  color: rgb(33, 55, 70);
   font-size: 17rem;
   position: relative;
   top: 566px;
@@ -127,12 +129,11 @@ nav a:hover::after {
   position: relative;
   font-weight: lighter;
   bottom: 19px;
-  left: 81px;
 }
 
 /* ================== 설명과 시작 ===================== */
 #section2 {
-  background-color: rgb(200, 191, 177);
+  background-color: white;
   /* height: 60vh; */
   position: relative;
   z-index: 7000;
