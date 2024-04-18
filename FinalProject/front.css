@@ -2,26 +2,7 @@
 
 body {
   min-height: 3000px;
-  font-family: "Montserrat", sans-serif;
 }
-.outer-container {
-  max-width: 600px;
-  margin: auto;
-  width: 90%;
-  padding: 200px 0px;
-  position: relative;
-}
-
-.image-container {
-  padding-bottom: (1/1) * 100%;
-  background: black;
-  position: relative;
-  overflow: hidden;
-  z-index: 2;
-  background-size: cover;
-  background-position: center;
-}
-
 .section-title {
   margin: 0;
   font-size: 64px;
