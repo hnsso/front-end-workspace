@@ -58,12 +58,14 @@ header a {
   display: inline-block;
   transition: all 0.4s;
   box-sizing: border-box;
+  top: 3px;
 }
 
 .menu-trigger {
   position: relative;
-  width: 50px;
-  height: 44px;
+  width: 42px;
+  height: 37px;
+  left: 68px;
 }
 
 .menu-trigger span {
@@ -125,7 +127,7 @@ header a {
   color: rgb(33, 55, 70);
   font-size: 17rem;
   position: relative;
-  top: 650px;
+  top: 547px;
   z-index: 1;
 }
 
@@ -134,7 +136,9 @@ header a {
   font-size: 4rem;
   position: relative;
   font-weight: lighter;
-  bottom: 19px;
+  width: 47%;
+  left: 53%;
+  top: 226px;
 }
 /* section 1 IMG / 글씨 */
 .container {
@@ -144,18 +148,19 @@ header a {
   width: 100%;
   position: relative;
 }
-
-.container:nth-child(1) {
-  background: #3c564f;
+.reveal {
+  position: relative;
+  bottom: 397px;
 }
 
 .image-wrap img {
   object-fit: cover;
-  width: 671px;
+  width: 630px;
   position: relative;
   left: 0px;
-  height: 690px;
+  height: 784px;
   bottom: 239px;
+  z-index: 8000000;
 }
 
 .image-wrap {
@@ -177,6 +182,7 @@ header a {
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   visibility: visible;
   transform: skewY(0);
+  height: 57vh;
 }
 
 .animating img {
@@ -258,7 +264,7 @@ header a {
   position: relative;
 }
 
-img {
+.sec3 img {
   object-fit: cover;
   width: 751px;
   position: relative;
@@ -286,10 +292,10 @@ img {
 }
 
 .son1 p {
-  font-size: 2rem;
-  width: 139vh;
+  font-size: 1.6rem;
+  width: 164vh;
   position: relative;
-  right: 71px;
+  right: 70px;
   bottom: 4px;
 }
 
@@ -308,7 +314,7 @@ img {
   opacity: 0.6;
   width: 1305px;
   position: relative;
-  right: 1851px;
+  right: 1282px;
   height: 100vh;
   float: left;
 }
@@ -323,10 +329,42 @@ img {
 
 /* ===================================================== */
 #section4 {
-  height: 100vh;
+  height: 120vh;
   background: rgb(219, 219, 219);
   position: relative;
   z-index: 5000;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  max-width: 1474px;
+}
+.row-cols-2 {
+  position: relative;
+  width: 130%;
+  height: 100vh;
+  left: 102px;
+}
+
+.col {
+  position: relative;
+  top: 33px;
+}
+
+.col h1 {
+  width: 50vh;
+  border-top: 1px solid;
+  padding-top: 0.35em;
+}
+
+.col p {
+  width: 67%;
+}
+
+.col img {
+  width: 64vh;
+  height: 31vh;
 }
 /* =================== 가로로 움직이는 =================== */
 
@@ -379,13 +417,13 @@ img {
 .adtdetail {
   position: relative;
   left: 38%;
-  bottom: 31px;
+  bottom: 66px;
 }
 
 .odcdetail {
   position: relative;
   left: 56%;
-  bottom: 31px;
+  bottom: 64px;
 }
 
 i {
@@ -454,7 +492,7 @@ span img {
 
 .message {
   height: 50vh;
-  background-color: ;
+  /* background-color: ; */
 }
 
 .footer {

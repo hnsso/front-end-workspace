@@ -92,9 +92,9 @@ $(window).scroll(function () {
   let scroll = $(window).scrollTop();
   $(".scroll").text(scroll);
 
-  let offset = scroll - $("#section3").offset().top;
+  let offset = scroll - $("#section2").offset().top;
 
-  if (scroll > $("#section3").offset().top) {
+  if (scroll > $("#section2").offset().top) {
     $(".sec3").css({ left: -offset + "px" });
   }
 });
