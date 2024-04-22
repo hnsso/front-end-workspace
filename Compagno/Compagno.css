@@ -493,9 +493,51 @@ span img {
 
 #section6 {
   height: 100vh;
-  background: yellow;
+  background: rgb(244, 244, 244);
   position: relative;
-  /* z-index: 7000; */
+}
+
+.content {
+  width: 50%;
+  height: 100vh;
+  text-align: center;
+  padding-top: 12%;
+}
+
+.content h1 {
+  font-size: 5.5rem;
+}
+
+.content p {
+  margin-top: 49px;
+  margin-bottom: 6rem;
+  font-size: 1.2rem;
+}
+
+.content .message {
+  border: 1px solid;
+}
+
+.content img {
+  object-fit: cover;
+  width: 50%;
+  height: 50%;
+}
+
+.content a {
+  text-decoration: none;
+  border-radius: 5px;
+  border: 2px solid;
+  color: rgb(32, 61, 59);
+  text-decoration: none;
+  padding: 10px;
+  font-size: 1rem;
+  align-items: center;
+}
+
+.content a:hover {
+  background-color: rgb(32, 61, 59);
+  color: white;
 }
 
 .message {
@@ -503,23 +545,66 @@ span img {
 }
 
 .photo img {
+  object-fit: cover;
+  width: 100vh;
+  height: 100%;
 }
 
+.photo {
+  display: flex;
+}
+
+.photo > img:nth-child(1) {
+  width: 50vh;
+  height: 100vh;
+}
+
+.photo > img:nth-child(2) {
+  width: 50vh;
+  height: 100vh;
+}
 /* ================================================================ */
 
 #section7 {
-  height: 100vh;
-
+  height: 69vh;
   position: relative;
-  /* z-index: 7000; */
+}
+.text {
+  height: 225px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
 }
 
-.message {
-  height: 50vh;
-  /* background-color: ; */
+.text div {
+  display: block;
+  width: 200%;
+  height: 225px;
+  bottom: 28px;
+  position: absolute;
+  overflow: hidden;
+  animation: text 10s linear infinite;
 }
+
+.text span {
+  float: right;
+  width: 100%;
+  font-size: 10rem;
+}
+
+@keyframes text {
+  0% {
+    right: 10%;
+  }
+  100% {
+    right: -100%;
+  }
+}
+
+/* ================================================================== */
 
 .footer {
   background-color: #213746;
   height: 50vh;
+  position: relative;
 }

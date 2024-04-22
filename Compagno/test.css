@@ -1,42 +1,36 @@
-.dropmenu li {
-  float: left;
-  padding: 0px;
+body {
+  margin: 20px;
 }
 
-.dropmenu li a:hover,
-.dropmenu ul li:hover a {
-  background: rgb(31, 31, 31);
-  color: #ffffff;
-  /* text-decoration: none; */
+.marquee {
+  height: 25px;
+  width: 420px;
+
+  overflow: hidden;
+  position: relative;
 }
 
-.dropmenu li ul {
-  display: none;
-  height: auto;
-  border: 0px;
-  position: absolute;
-  width: 100vh;
-  z-index: 200;
-  top: 1em;
-  left: 0;
-}
-
-.dropmenu li:hover ul {
+.marquee div {
   display: block;
+  width: 200%;
+  height: 30px;
+
+  position: absolute;
+  overflow: hidden;
+
+  animation: marquee 5s linear infinite;
 }
 
-.dropmenu li li {
-  background: black;
-  float: none;
-  margin: 0px;
-  padding: 0px;
-  width: 100vh;
+.marquee span {
+  float: left;
+  width: 50%;
 }
 
-.dropmenu li:hover li a {
-  background: none;
-}
-
-.list {
-  display: inline-block;
+@keyframes marquee {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -100%;
+  }
 }

@@ -1,8 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App";
+// ===================================================================================2
+import { RouterProvider } from "react-router-dom"; // 연결하기위해서 Provider가 필요하다
 import router from "./router";
-import { createRenderer } from "react-dom/test-utils";
-
+// ===================================================================================
+import "./asset/reset.css";
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<App />);
+root.render(<RouterProvider router={router} />); // <App> => provider로 변경
