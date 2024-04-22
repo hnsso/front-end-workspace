@@ -21,68 +21,72 @@
   </head>
   <body>
     <header class="head">
-      <div class="logo">
-        <a href="#" class="logo">Compagno</a>
-      </div>
-      <ul>
-        <li><a href="">동물 등록</a>
-            <ul>
-             <li>대행 기관</li>
-             <li>FAQ</li>
-            </ul>
-       </li>
-        <li><a href="">구조 동물</a>
-        <ul>
-          <li>입양</li>
-          <li>실종신고</li>
-        </ul></li>
-        <li class="Board-list">
-          <li>
-           <a href="" class="Board">Board</a>
-           <ul class="depth">
-            <li><a href="">QnA</a></li>
-            <li><a href="">???0</a></li>
-            <li><a href="">자유게시판</a></li>
-            <li><a href="">???0</a></li>
-           </ul>
-          </li>
-          <li><a href="">정보공유</a>
-          <ul>
-            <li>자유게시판</li>
-            <li>장소정보</li>
-            <li>내새끼 자랑</li>
-            <li>제품정보 공유</li>
-          </ul></li>
-          <li><a href="">구조동물</a></li>
-          <li><a href="">서비스 제공</a>
-          <ul>
-            <li></li>
-          </ul>
-        </li>
-        </li>
-        <li><a href="/login" class="Login">Login</a></li>
-        <li>
-          <div id="page">
-            <div id="toggle">
-              <div class="bar"></div>
-            </div>
-            <section id="overlay">
-              <nav>
-                <p>Compagno</p>
-                <ul>
-                  <li><a href="#">Homepage</a></li>
-                  <li><a href="#">Company</a></li>
-                  <li><a href="#">Products</a></li>
-                  <li><a href="#">About us</a></li>
-                  <li><a href="#">Contacts</a></li>
-                  <li><a href="#">About us</a></li>
-                  <li><a href="#">Contacts</a></li>
-                </ul>
-              </nav>
-            </section>
+      <a href="logo" class="logo">Compagno</a>
+      <div class="menu">
+        <div class="dropdown">
+          <span class="dropbtn">동물 등록</span>
+          <div class="dropdown-content">
+            <a href="#">대행기관</a>
+            <a href="#">FAQ</a>
           </div>
-        </li>
-      </ul>
+        </div>
+        <div class="dropdown">
+          <span class="dropbtn">구조 동물</span>
+          <div class="dropdown-content">
+            <a href="#">입양 공고</a>
+            <a href="#">실종 공고</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <span class="dropbtn" id="p">게시판</span>
+          <div class="dropdown-content">
+            <a href="#">콘테스트</a>
+            <a href="#">제품정보 공유</a>
+            <a href="#">반려동물 동반</a>
+            <a href="#">우리동네 게시판</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <span class="dropbtn" id="p">서비스</span>
+          <div class="dropdown-content">
+            <a href="#">펫 시터</a>
+            <a href="#">원데이 클래스</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <span class="dropbtn">공지사항</span>
+          <div class="dropdown-content">
+            <a href="#">공지사항</a>
+            <a href="#">QnA</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <span class="dropbtn">마이페이지</span>
+          <div class="dropdown-content">
+            <a href="#">계정정보 수정</a>
+            <a href="#">활동 내역</a>
+          </div>
+        </div>
+        <div id="page">
+          <div id="toggle">
+            <div class="bar"></div>
+          </div>
+          <section id="overlay">
+            <nav>
+              <p>Compagno</p>
+              <ul>
+                <li><a href="#">Homepage</a></li>
+                <li><a href="#">Company</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Contacts</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Contacts</a></li>
+              </ul>
+            </nav>
+          </section>
+        </div>
+      </div>
     </header>
     <section id="section1">
       <p class="fadeup">Compagno .</p>
@@ -274,15 +278,27 @@
       <div class="message">
         <div class="content">
           <h1>Messenger</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto nam nisi natus voluptates ea magnam ex. Incidunt doloribus quibusdam excepturi? Rerum autem amet iusto quidem eveniet labore fugiat dignissimos veniam!
-          Eos culpa corrupti eligendi cupiditate, incidunt quia illum asperiores ex distinctio debitis placeat unde cum, sapiente assumenda eaque provident natus impedit, hic in! Quae eveniet eaque asperiores eos necessitatibus! Consequuntur.
-          Debitis aspernatur beatae enim velit suscipit quod totam dicta sequi earum repellendus nisi, aliquam recusandae ratione at soluta possimus sunt eos odio, quasi libero perferendis ipsum! Ex perferendis iste provident.
-          Aperiam ipsam, corrupti inventore quisquam a nemo eveniet itaque vero, veniam libero error rem nostrum sequi ipsum dignissimos tempora cum architecto voluptatibus aliquam suscipit natus consequatur vel recusandae quis? Ab.</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto
+            nam nisi natus voluptates ea magnam ex. Incidunt doloribus quibusdam
+            excepturi? Rerum autem amet iusto quidem eveniet labore fugiat
+            dignissimos veniam! Eos culpa corrupti eligendi cupiditate, incidunt
+            quia illum asperiores ex distinctio debitis placeat unde cum,
+            sapiente assumenda eaque provident natus impedit, hic in! Quae
+            eveniet eaque asperiores eos necessitatibus! Consequuntur. Debitis
+            aspernatur beatae enim velit suscipit quod totam dicta sequi earum
+            repellendus nisi, aliquam recusandae ratione at soluta possimus sunt
+            eos odio, quasi libero perferendis ipsum! Ex perferendis iste
+            provident. Aperiam ipsam, corrupti inventore quisquam a nemo eveniet
+            itaque vero, veniam libero error rem nostrum sequi ipsum dignissimos
+            tempora cum architecto voluptatibus aliquam suscipit natus
+            consequatur vel recusandae quis? Ab.
+          </p>
           <a href="">유저들과의 대화를 원하시나요</a>
         </div>
         <div class="photo">
-          <img src="../Compagno/resource/setion6 message 세로.jpg" alt="" >
-          <img src="../Compagno/resource/message 이미지 section6.jpg" alt="">
+          <img src="../Compagno/resource/setion6 message 세로.jpg" alt="" />
+          <img src="../Compagno/resource/message 이미지 section6.jpg" alt="" />
         </div>
       </div>
     </section>

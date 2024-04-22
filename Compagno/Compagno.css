@@ -52,7 +52,60 @@ header a {
   text-decoration: none;
 }
 /* =========================================== */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  width: 96px;
+}
 
+.dropbtn {
+  position: relative;
+  left: 29px;
+}
+
+#p {
+  position: relative;
+  left: 41px;
+}
+
+.dropdown-content {
+  display: none;
+
+  position: absolute;
+  z-index: 1;
+  top: 44px;
+  width: 142px;
+}
+
+.dropdown-content a {
+  display: block;
+  height: 50px;
+  align-items: center;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 3rem;
+  padding-left: 53px;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  width: 75%;
+  font-size: 1.2rem;
+  text-align: center;
+}
 /* =========================================== */
 
 .Login {
@@ -262,6 +315,7 @@ header a {
   background: rgb(219, 219, 219);
   position: relative;
   z-index: 10;
+  /* top: 111px; */
 }
 
 #section1 p {
