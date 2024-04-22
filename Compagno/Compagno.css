@@ -14,7 +14,7 @@ header {
   color: white;
   font-size: 20px;
   /* ==== */
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.3);
   -webkit-transition-duration: 0.4s;
   -webkit-transition-timing-function: ease;
   transition-duration: 0.4s;
@@ -49,6 +49,21 @@ header a {
   font-size: 20px;
   color: rgb(33, 55, 70);
   text-decoration: none;
+}
+/* =========================================== */
+
+/* =========================================== */
+
+.Login {
+  border: 2px solid;
+  color: black;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.Login:hover {
+  background-color: black;
+  color: white;
 }
 
 /* ============================== 메뉴 햄버거 ================================== */
@@ -370,7 +385,7 @@ header a {
 
 /* =========================================================== */
 #section5 {
-  height: 120vh;
+  height: 129vh;
   background: #efede9;
   position: relative;
 }
@@ -482,6 +497,15 @@ span img {
   position: relative;
   /* z-index: 7000; */
 }
+
+.message {
+  display: flex;
+}
+
+.photo img {
+}
+
+/* ================================================================ */
 
 #section7 {
   height: 100vh;

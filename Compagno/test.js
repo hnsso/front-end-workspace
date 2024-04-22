@@ -1,55 +1,44 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const options = {
-    root: null,
-    rootMargin: "0px",
-    threshold: 0.4,
-  };
-
-  // IMAGE ANIMATION
-
-  let revealCallback = (entries) => {
-    entries.forEach((entry) => {
-      let container = entry.target;
-
-      if (entry.isIntersecting) {
-        console.log(container);
-        container.classList.add("animating");
-        return;
-      }
-
-      if (entry.boundingClientRect.top > 0) {
-        container.classList.remove("animating");
-      }
-    });
-  };
-
-  let revealObserver = new IntersectionObserver(revealCallback, options);
-
-  document.querySelectorAll(".reveal").forEach((reveal) => {
-    revealObserver.observe(reveal);
+$(document).ready(function () {
+  $(".menu_btn").click(function () {
+    $(".menu_btn").toggleClass("lijo");
+    $(".gnb").toggleClass("surya");
   });
 
-  // TEXT ANIMATION
+  $(".gnb li").click(function () {
+    $(this).find(".sub").slideToggle();
+    var t = $(this).find(".sub");
+    $(".sub").not(t).slideUp();
+  });
 
-  let fadeupCallback = (entries) => {
-    entries.forEach((entry) => {
-      let container = entry.target;
-      container.classList.add("not-fading-up");
+  var max_h = 0;
+  $(".sub").each(function () {
+    var h = parseInt($(this).css("height"));
+    if (max_h < h) {
+      max_h = h;
+    }
+  });
 
-      if (entry.isIntersecting) {
-        container.classList.add("fading-up");
-        return;
-      }
-
-      if (entry.boundingClientRect.top > 0) {
-        container.classList.remove("fading-up");
-      }
+  // 마우스 over 시
+  $(".gnb").mouseenter(function () {
+    // menu bg
+    var menuHeight = $("#header").outerHeight();
+    $(".hd_bg").css({
+      top: menuHeight + "px",
+      height: max_h + 30 + "px",
     });
-  };
+    $("#header").addClass("open");
+  });
 
-  let fadeupObserver = new IntersectionObserver(fadeupCallback, options);
+  $(".gnb").mouseleave(function () {
+    $(".hd_bg").css("height", "0");
+    $("#header").removeClass("open");
+  });
 
-  document.querySelectorAll(".fadeup").forEach((fadeup) => {
-    fadeupObserver.observe(fadeup);
+  $(".gnb > li").mouseenter(function () {
+    $(this).addClass("active");
+    $(this).siblings().removeClass("active");
+  });
+  $(".gnb > li").mouseleave(function () {
+    $(this).removeClass("active");
   });
 });
