@@ -28,7 +28,12 @@ burger.each(function (index) {
     $(this).toggleClass("active-" + (index + 1));
   });
 });
+// ========================================================== 햄버거 메뉴
 
+$("#toggle").click(function () {
+  $("#toggle .bar").toggleClass("animate");
+  $("#page").toggleClass("overlay");
+});
 // ========================================================== section1
 document.addEventListener("DOMContentLoaded", function () {
   const options = {
