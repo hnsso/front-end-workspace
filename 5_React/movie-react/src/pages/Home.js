@@ -27,11 +27,13 @@ const StyledDiv = styled.div`
 `;
 
 const Home = () => {
+  // 일단 담아낼 변수랑 함수 두개 !! 설정
   const [movies, setMovies] = useState([]);
+  // 여러기능이 포함되어있는 API 만들고 설정
   const moviesAPI = async () => {
     const result = await getMovies();
     console.log(result);
-    setMovies(result.data);
+    setMovies(result.data); // 비동기 처리된 기능들과 정보들을 setMovies에 담아서 useEffect로 실행!
   };
 
   useEffect(() => {
