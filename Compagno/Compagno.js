@@ -168,35 +168,35 @@
 
 // =========================================================================
 
-// const Section2 = () => {
-//   const counters = document.querySelectorAll(".scroll_on");
-//   const exposurePercentage = 100;
-//   const loop = true;
+const Section2 = () => {
+  const counters = document.querySelectorAll(".scroll_on");
+  const exposurePercentage = 100;
+  const loop = true;
 
-//   const handleScroll = () => {
-//     counters.forEach((counter) => {
-//       const rect = counter.getBoundingClientRect();
-//       const winHeight = window.innerHeight;
-//       const contentHeight = rect.bottom - rect.top;
+  const handleScroll = () => {
+    counters.forEach((counter) => {
+      const rect = counter.getBoundingClientRect();
+      const winHeight = window.innerHeight;
+      const contentHeight = rect.bottom - rect.top;
 
-//       if (
-//         rect.top <= winHeight - (contentHeight * exposurePercentage) / 100 &&
-//         rect.bottom >= (contentHeight * exposurePercentage) / 100
-//       ) {
-//         console.log("active");
-//         counter.classList.add("active");
-//       }
+      if (
+        rect.top <= winHeight - (contentHeight * exposurePercentage) / 100 &&
+        rect.bottom >= (contentHeight * exposurePercentage) / 100
+      ) {
+        console.log("active");
+        counter.classList.add("active");
+      }
 
-//       if (loop && (rect.bottom <= 0 || rect.top >= winHeight)) {
-//         counter.classList.remove("active");
-//         console.log("remove");
-//       }
-//     });
-//   };
+      if (loop && (rect.bottom <= 0 || rect.top >= winHeight)) {
+        counter.classList.remove("active");
+        console.log("remove");
+      }
+    });
+  };
 
-//   document.addEventListener("scroll", handleScroll);
-//   handleScroll(); // 페이지 로드시 한번 실행
-// };
+  document.addEventListener("scroll", handleScroll);
+  handleScroll(); // 페이지 로드시 한번 실행
+};
 
 // Section2(); // Section2 함수 호출
 // ===================================================================

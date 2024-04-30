@@ -1,56 +1,58 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-li {
-  list-style: none;
-}
 body {
-  font-family: "Nanum Gothic", sans-serif;
-  width: 1200px;
-  margin: 0 auto;
+  width: 100vh;
+  height: 100vh;
 }
 
-.logo {
-  margin: 50px 0;
-  font-size: 30px;
-  text-align: center;
-  font-family: "Nanum Brush Script", cursive;
+.content div {
+  padding: 20px;
+  font-size: 1.2rem;
 }
 
-.topMenu {
-  width: 100%;
-  margin-bottom: 20px;
-  text-align: center;
-  height: 40px;
+.content {
+  position: relative;
+  right: 105px;
 }
-.topMenu:after {
-  content: "";
-  display: block;
-  clear: both;
+.title {
+  position: relative;
+  bottom: 12px;
 }
-.menu01 > li {
-  float: left;
-  width: 20%;
-  line-height: 40px;
+.con {
+  position: relative;
+  bottom: 44px;
 }
-.menu01 span {
-  font-size: 20px;
-  font-weight: bold;
+.Accompaying {
+  position: relative;
+  bottom: 131px;
+  left: 336px;
 }
-
-.dept01 {
+.origi {
+  position: relative;
+  bottom: 190px;
+  right: 381px;
+}
+.startDate {
+  position: relative;
+  top: 60px;
+}
+.lastDate {
+  position: relative;
+  left: 390px;
+}
+img {
+  width: 80%;
+  height: 90%;
+  position: relative;
+  top: 35px;
   display: none;
-  padding: 20px 0;
-  border-bottom: 1px solid #ccc;
 }
-
-#nop {
-  float: none;
+img :hover {
+  display: ;
 }
-
-.none:after {
-  content: "";
-  display: block;
-  clear: both;
+.list {
+  position: relative;
+  left: 50%;
+  top: 10%;
+  width: 900px;
+  height: 350px;
+  display: flex;
 }
