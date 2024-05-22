@@ -1,13 +1,23 @@
 const Section = () => {
-  const counters = document.querySelectorAll(".scroll_on"); // 문서객체내에있는 scroll_on 클래스 전부 지정 !
+  const counters = document.querySelectorAll(".scroll_on");
+  // couters 라는 변수에다가 css에 ClassName이 scroll_on인 태크들을 다 선택하겠다 !!
   const loop = true;
+  // true , false 처리를 위한 boolean
 
+  // 이벤트를 실행시키기위해서 handleScroll 화살표 함수를 만든다 !!
   const handleScroll = () => {
+    // 클래스 scroll_on인 집합들을 각각을 매개변수 counter로 잡아서 각각에 이벤트를 시키기위해서 하는 방법
     counters.forEach((counter) => {
-      const rect = counter.getBoundingClientRect(); // 구체적위치와 높이 넢이(x,y)
-      const winHeight = window.innerHeight; // 브라우저의 창 높이
+      // 각각의 요소들의 위치
+      const rect = counter.getBoundingClientRect();
+
+      // 네비게이션 부분을 제외한 높이
+      const winHeight = window.innerHeight;
+      
+      // 각가의 요소들의 높이
       const contentHeight = rect.bottom - rect.top; //실제 높이 !! .scroll_on의 부분의 높이값
 
+      
       if (
         rect.top <= winHeight - contentHeight &&
         rect.bottom >= contentHeight
