@@ -50,8 +50,7 @@ const Detail = () => {
           setAnimal((prev) => ({ ...prev, name: e.target.value }))
         }
       />
-      <input
-        type="text"
+      <input 
         value={animal.age}
         onChange={(e) =>
           setAnimal((prev) => ({ ...prev, age: e.target.value }))
